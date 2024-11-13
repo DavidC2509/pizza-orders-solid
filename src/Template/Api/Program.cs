@@ -1,27 +1,30 @@
 
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using Template.Api.Endpoints;
 using Template.Api.Extensions;
 using Template.Command;
+using Template.Command.Database;
+using Template.ServiceDefaults;
+using Template.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+var appName = "PizzaSolid";
+
+builder.AddServiceDefaults();
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
-
-// Add services to the container.
-builder.Services.AddControllers();
-
-string? connectionString = builder.Configuration.GetConnectionString("TemplateDatabase");
-builder.Services.AddDbContext(connectionString!);
-
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
 
 
 builder.ConfigureSwagger();
 
+// Add services to the container.
+builder.Services.AddControllers();
+builder.Services.AddProblemDetails();
+
+
+builder.AddNpgsqlDbContext<DataBaseContext>("login-pizza-database");
+
+builder.Services.AddApplication();
 
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 {
@@ -31,34 +34,23 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.MapDefaultEndpoints();
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.MapControllers();
 
-app.MapTemplate();
-
-
 app.UseHttpsRedirection();
+try
+{
+    app.Logger.LogInformation("Starting web host ({ApplicationName})...", appName);
+    app.Run();
+}
+catch (Exception ex)
+{
+    app.Logger.LogCritical(ex, "Host terminated unexpectedly ({ApplicationName})...", appName);
+}
 
-app.UseRouting();
-
-app.UseAuthorization();
 
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    var dbContext = scope.ServiceProvider
-//        .GetRequiredService<DataBaseContext>();
-
-//    if (app.Environment.IsDevelopment())
-//    {
-//        await dbContext.Database.MigrateAsync();
-//    }
-//}
-
-app.Run();

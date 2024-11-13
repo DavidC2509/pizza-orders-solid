@@ -15,8 +15,8 @@ namespace Template.Command.Migrations
                 name: "Border",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "gen_random_uuid()"),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "gen_random_uuid()"),
+                    Description = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -27,10 +27,10 @@ namespace Template.Command.Migrations
                 name: "Client",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "gen_random_uuid()"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CellPhone = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "gen_random_uuid()"),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Email = table.Column<string>(type: "text", nullable: false),
+                    CellPhone = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -41,9 +41,9 @@ namespace Template.Command.Migrations
                 name: "Ingredients",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "gen_random_uuid()"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Amount = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "gen_random_uuid()"),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Amount = table.Column<decimal>(type: "numeric(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -54,9 +54,9 @@ namespace Template.Command.Migrations
                 name: "RecipePizza",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "gen_random_uuid()"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "gen_random_uuid()"),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -67,11 +67,11 @@ namespace Template.Command.Migrations
                 name: "Order",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "gen_random_uuid()"),
-                    ClientId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    OrderDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Total = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    IsFreeDeviliry = table.Column<bool>(type: "bit", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "gen_random_uuid()"),
+                    ClientId = table.Column<Guid>(type: "uuid", nullable: false),
+                    OrderDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Total = table.Column<decimal>(type: "numeric(18,2)", nullable: false),
+                    IsFreeDeviliry = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -88,12 +88,12 @@ namespace Template.Command.Migrations
                 name: "Pizza",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "gen_random_uuid()"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsPersonalizate = table.Column<bool>(type: "bit", nullable: false),
-                    AmountBase = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    RecipePizzaId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
-                    BorderIds = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "gen_random_uuid()"),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    IsPersonalizate = table.Column<bool>(type: "boolean", nullable: false),
+                    AmountBase = table.Column<decimal>(type: "numeric(18,2)", nullable: false),
+                    RecipePizzaId = table.Column<Guid>(type: "uuid", nullable: true),
+                    BorderIds = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -115,8 +115,8 @@ namespace Template.Command.Migrations
                 name: "RecipePizzaIngredient",
                 columns: table => new
                 {
-                    IngredientsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    RecipePizzasId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    IngredientsId = table.Column<Guid>(type: "uuid", nullable: false),
+                    RecipePizzasId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -139,9 +139,9 @@ namespace Template.Command.Migrations
                 name: "DeliveryOrder",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false, defaultValueSql: "gen_random_uuid()"),
-                    IsFree = table.Column<bool>(type: "bit", nullable: false),
-                    Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "gen_random_uuid()"),
+                    IsFree = table.Column<bool>(type: "boolean", nullable: false),
+                    Price = table.Column<decimal>(type: "numeric(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -158,8 +158,8 @@ namespace Template.Command.Migrations
                 name: "IngredientPizza",
                 columns: table => new
                 {
-                    IngredientsId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    PizzasId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    IngredientsId = table.Column<Guid>(type: "uuid", nullable: false),
+                    PizzasId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -182,8 +182,8 @@ namespace Template.Command.Migrations
                 name: "OrderPizzas",
                 columns: table => new
                 {
-                    OrdersId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    PizzasId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    OrdersId = table.Column<Guid>(type: "uuid", nullable: false),
+                    PizzasId = table.Column<Guid>(type: "uuid", nullable: false)
                 },
                 constraints: table =>
                 {

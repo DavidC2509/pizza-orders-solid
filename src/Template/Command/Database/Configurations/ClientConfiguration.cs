@@ -14,6 +14,8 @@ namespace Template.Command.Database.Configurations
             builder.Property(e => e.Id)
             .HasDefaultValueSql("gen_random_uuid()");
 
+            builder.HasKey(e => e.Id);
+
             builder
             .HasMany(e => e.Orders)
               .WithOne(e => e.Client)

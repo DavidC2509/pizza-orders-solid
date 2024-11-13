@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Services\Services.csproj" />
+    <ProjectReference Include="..\Template.ServiceDefaults\Template.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>

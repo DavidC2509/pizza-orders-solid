@@ -13,7 +13,7 @@ namespace Template.Command.Database.Configurations
             // Configure the Id property to use the database default value for new entities
             builder.Property(e => e.Id)
             .HasDefaultValueSql("gen_random_uuid()");
-
+            builder.HasKey(e => e.Id);
             builder
              .Property(p => p.Price)
             .HasColumnType("decimal(18,2)");
