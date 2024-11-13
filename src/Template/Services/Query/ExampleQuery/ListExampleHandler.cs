@@ -1,16 +1,16 @@
 ﻿using AutoMapper;
 using Core.Cqrs.CommandAndQueryHandler;
 using Core.Cqrs.Domain.Repository;
-using Template.Domain.ExampleAggregate;
+using Template.Domain.PizzaAggregate;
 using Template.Services.Models;
 
 namespace Template.Services.Query.ExampleQuery
 {
-    public class ListExampleHandler : BaseQueryHandler<Example, ListExampleQuery, IEnumerable<ExampleModels>>
+    public class ListExampleHandler : BaseQueryHandler<Pizza, ListExampleQuery, IEnumerable<ExampleModels>>
     {
         private readonly IMapper _mapper;
 
-        public ListExampleHandler(IReadRepository<Example> repository, IMapper mapper) : base(repository)
+        public ListExampleHandler(IReadRepository<Pizza> repository, IMapper mapper) : base(repository)
         {
             _mapper = mapper;
         }

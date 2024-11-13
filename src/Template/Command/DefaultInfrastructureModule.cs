@@ -3,7 +3,7 @@ using Core.Cqrs.Domain.Repository;
 using MediatR;
 using MediatR.Pipeline;
 using System.Reflection;
-using Template.Domain.ExampleAggregate;
+using Template.Domain.PizzaAggregate;
 using Module = Autofac.Module;
 
 namespace Template.Command
@@ -21,7 +21,7 @@ namespace Template.Command
             _isDevelopment = isDevelopment;
 
             // Obtiene referencias a los ensamblados de la aplicación.
-            var coreAssembly = Assembly.GetAssembly(typeof(Example));
+            var coreAssembly = Assembly.GetAssembly(typeof(Pizza));
             var infrastructureAssembly = Assembly.GetAssembly(typeof(StartupSetup));
 
             // Agrega los ensamblados a la lista de ensamblados.

@@ -5,13 +5,10 @@ using Microsoft.EntityFrameworkCore;
 using Template.Api.Endpoints;
 using Template.Api.Extensions;
 using Template.Command;
-using Template.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
-builder.Services.ConfigureResponseCaching();
-
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -21,8 +18,6 @@ builder.Services.AddDbContext(connectionString!);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-
-builder.Services.AddApplication();
 
 
 builder.ConfigureSwagger();
