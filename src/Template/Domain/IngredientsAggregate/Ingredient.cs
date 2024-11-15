@@ -19,5 +19,23 @@ namespace Template.Domain.IngredientsAggregate
             Pizzas = [];
             RecipePizzas = [];
         }
+
+        internal Ingredient(string name, decimal amount) : this()
+        {
+            Name = name;
+            Id = Guid.NewGuid();
+            Amount = amount;
+        }
+
+        internal Ingredient(string name, decimal amount, Guid id) : this()
+        {
+            Name = name;
+            Id = id;
+            Amount = amount;
+
+        }
+
+        public static Ingredient CreateIngredients(string name, decimal amount, Guid id)
+        => new(name, amount, id);
     }
 }

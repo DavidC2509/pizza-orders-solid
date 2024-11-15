@@ -9,10 +9,9 @@ namespace Template.Domain.RecipePizzaAggregate
     {
         public string Name { get; set; }
         public string Description { get; set; }
-
+        public decimal Price { get; set; }
         public ICollection<Ingredient> Ingredients { get; set; }
         public ICollection<Pizza> Pizzas { get; set; }
-
 
         private RecipePizza()
         {
@@ -20,8 +19,19 @@ namespace Template.Domain.RecipePizzaAggregate
             Description = string.Empty;
             Ingredients = [];
             Pizzas = [];
+            Id = Guid.NewGuid();
 
         }
+
+        internal RecipePizza(string name, string description, decimal price) : this()
+        {
+            Name = name;
+            Description = description;
+            Price = price;
+        }
+
+        public static RecipePizza CreateRecipePizza(string name, string description, decimal price)
+        => new(name, description, price);
 
     }
 }

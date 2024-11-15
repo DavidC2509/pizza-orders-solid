@@ -15,14 +15,44 @@ namespace Template.Domain.PizzaAggregate
         public ICollection<Ingredient> Ingredients { get; set; }
         public RecipePizza? RecipePizza { get; set; }
         public ICollection<Order> Orders { get; set; }
-        public Border Borders { get; set; }
+        public Border? Borders { get; set; }
 
         private Pizza()
         {
             Name = string.Empty;
             Ingredients = [];
             Orders = [];
-            Borders = null!;
         }
+
+        public static Pizza CreatePizzaSinDecorar()
+        => new();
+
+        public void SetName(string name)
+        {
+            Name = name;
+        }
+
+        public void SetIsPersonalizate(bool isPersonalizate)
+        {
+            IsPersonalizate = isPersonalizate;
+        }
+
+        public void SetBorder(Border border)
+        {
+            Borders = border;
+        }
+
+        public void SetRecipePizza(RecipePizza recipePizza)
+        {
+            RecipePizza = recipePizza;
+        }
+
+        public void AddIngredients(Ingredient ingredient)
+        {
+            Ingredients.Add(ingredient);
+        }
+
+
+
     }
 }

@@ -12,7 +12,7 @@ using Template.Command.Database;
 namespace Template.Command.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20241113183239_Inital")]
+    [Migration("20241115145901_Inital")]
     partial class Inital
     {
         /// <inheritdoc />
@@ -27,17 +27,17 @@ namespace Template.Command.Migrations
 
             modelBuilder.Entity("IngredientPizza", b =>
                 {
-                    b.Property<Guid>("IngredientsId")
+                    b.Property<Guid>("IngredientId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("PizzasId")
+                    b.Property<Guid>("PizzaId")
                         .HasColumnType("uuid");
 
-                    b.HasKey("IngredientsId", "PizzasId");
+                    b.HasKey("IngredientId", "PizzaId");
 
-                    b.HasIndex("PizzasId");
+                    b.HasIndex("PizzaId");
 
-                    b.ToTable("IngredientPizza");
+                    b.ToTable("IngredientPizza", (string)null);
                 });
 
             modelBuilder.Entity("OrderPizzas", b =>
@@ -57,17 +57,39 @@ namespace Template.Command.Migrations
 
             modelBuilder.Entity("RecipePizzaIngredient", b =>
                 {
-                    b.Property<Guid>("IngredientsId")
+                    b.Property<Guid>("IngredientId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid>("RecipePizzasId")
+                    b.Property<Guid>("RecipePizzaId")
                         .HasColumnType("uuid");
 
-                    b.HasKey("IngredientsId", "RecipePizzasId");
+                    b.HasKey("IngredientId", "RecipePizzaId");
 
-                    b.HasIndex("RecipePizzasId");
+                    b.HasIndex("RecipePizzaId");
 
-                    b.ToTable("RecipePizzaIngredient");
+                    b.ToTable("RecipePizzaIngredient", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            IngredientId = new Guid("d0c97a12-0442-4bf7-9cc0-36b9960df708"),
+                            RecipePizzaId = new Guid("f85446d5-28af-446a-b9ed-aada8c234800")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("00455623-5fad-4c25-b023-eaa6312dccf1"),
+                            RecipePizzaId = new Guid("f85446d5-28af-446a-b9ed-aada8c234800")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("d0c97a12-0442-4bf7-9cc0-36b9960df708"),
+                            RecipePizzaId = new Guid("e90074cd-920d-4b07-8669-722365c417cc")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("4cc9d738-2f35-4e1e-9ffa-f8ab56e8b42c"),
+                            RecipePizzaId = new Guid("e90074cd-920d-4b07-8669-722365c417cc")
+                        });
                 });
 
             modelBuilder.Entity("Template.Domain.BorderAggregate.Border", b =>
@@ -84,6 +106,88 @@ namespace Template.Command.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Border", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("ec82c525-9413-4d3f-bc5f-293e3692946a"),
+                            Description = "Sin Borde"
+                        },
+                        new
+                        {
+                            Id = new Guid("5a1686b7-4969-456d-9936-dec6f78faf48"),
+                            Description = "Borde de queso"
+                        },
+                        new
+                        {
+                            Id = new Guid("192bbc9a-22b0-4985-a906-f91dfecd560c"),
+                            Description = "Borde relleno de pepperoni"
+                        },
+                        new
+                        {
+                            Id = new Guid("7c822420-65e4-4776-8b04-c4b6e8db6fbb"),
+                            Description = "Borde de ajo y mantequilla"
+                        },
+                        new
+                        {
+                            Id = new Guid("43837200-33d9-4814-b3b7-d5186fed87f6"),
+                            Description = "Borde crujiente"
+                        },
+                        new
+                        {
+                            Id = new Guid("f712c727-ad26-4dce-a374-1d6fcf00654c"),
+                            Description = "Borde de masa fina"
+                        },
+                        new
+                        {
+                            Id = new Guid("ddec3709-f414-49be-a951-38ccac9ecc73"),
+                            Description = "Borde con parmesano"
+                        },
+                        new
+                        {
+                            Id = new Guid("a0b4a738-0479-44cd-96de-596d541052e1"),
+                            Description = "Borde relleno de jalapeños"
+                        },
+                        new
+                        {
+                            Id = new Guid("1817c44f-1dae-43a2-872a-c25ae3b40b2c"),
+                            Description = "Borde relleno de queso cheddar"
+                        },
+                        new
+                        {
+                            Id = new Guid("c2900aec-9ab7-4fe2-89af-b210b9bdffce"),
+                            Description = "Borde de pan de ajo"
+                        },
+                        new
+                        {
+                            Id = new Guid("19c3a0b2-7be8-4446-8f6c-82d897f78410"),
+                            Description = "Borde sin gluten"
+                        },
+                        new
+                        {
+                            Id = new Guid("3b5ff98d-9971-41b0-908c-ec02c8d3b9ef"),
+                            Description = "Borde tradicional"
+                        },
+                        new
+                        {
+                            Id = new Guid("8dfc18e2-403d-407b-965f-d993abdbea3f"),
+                            Description = "Borde relleno de salchicha"
+                        },
+                        new
+                        {
+                            Id = new Guid("02ba093d-96a5-4646-affe-5c51583ed790"),
+                            Description = "Borde extra crujiente"
+                        },
+                        new
+                        {
+                            Id = new Guid("8a844f4a-4b7a-4b26-834d-9610e542b6e6"),
+                            Description = "Borde con especias italianas"
+                        },
+                        new
+                        {
+                            Id = new Guid("40cc86c0-86e1-4126-b505-d5edcb00a813"),
+                            Description = "Borde con orégano y aceite de oliva"
+                        });
                 });
 
             modelBuilder.Entity("Template.Domain.ClientAggregate.Client", b =>
@@ -127,6 +231,32 @@ namespace Template.Command.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Ingredients", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("d0c97a12-0442-4bf7-9cc0-36b9960df708"),
+                            Amount = 2.0m,
+                            Name = "Queso"
+                        },
+                        new
+                        {
+                            Id = new Guid("00455623-5fad-4c25-b023-eaa6312dccf1"),
+                            Amount = 1.5m,
+                            Name = "Salsa de Tomate"
+                        },
+                        new
+                        {
+                            Id = new Guid("4cc9d738-2f35-4e1e-9ffa-f8ab56e8b42c"),
+                            Amount = 2.5m,
+                            Name = "Pepperoni"
+                        },
+                        new
+                        {
+                            Id = new Guid("7599ceef-6ac1-4826-bd2d-c912c65108c1"),
+                            Amount = 1.0m,
+                            Name = "Champiñones"
+                        });
                 });
 
             modelBuilder.Entity("Template.Domain.OrderAggregate.DeliveryOrder", b =>
@@ -183,7 +313,7 @@ namespace Template.Command.Migrations
                     b.Property<decimal>("AmountBase")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<Guid>("BorderIds")
+                    b.Property<Guid?>("BorderIds")
                         .HasColumnType("uuid");
 
                     b.Property<bool>("IsPersonalizate")
@@ -220,22 +350,41 @@ namespace Template.Command.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric");
+
                     b.HasKey("Id");
 
                     b.ToTable("RecipePizza", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("f85446d5-28af-446a-b9ed-aada8c234800"),
+                            Description = "Pizza clásica con salsa de tomate, mozzarella y albahaca fresca.",
+                            Name = "Margarita",
+                            Price = 8.5m
+                        },
+                        new
+                        {
+                            Id = new Guid("e90074cd-920d-4b07-8669-722365c417cc"),
+                            Description = "Pizza con pepperoni y queso mozzarella.",
+                            Name = "Pepperoni",
+                            Price = 10.0m
+                        });
                 });
 
             modelBuilder.Entity("IngredientPizza", b =>
                 {
                     b.HasOne("Template.Domain.IngredientsAggregate.Ingredient", null)
                         .WithMany()
-                        .HasForeignKey("IngredientsId")
+                        .HasForeignKey("IngredientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Template.Domain.PizzaAggregate.Pizza", null)
                         .WithMany()
-                        .HasForeignKey("PizzasId")
+                        .HasForeignKey("PizzaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -259,13 +408,13 @@ namespace Template.Command.Migrations
                 {
                     b.HasOne("Template.Domain.IngredientsAggregate.Ingredient", null)
                         .WithMany()
-                        .HasForeignKey("IngredientsId")
+                        .HasForeignKey("IngredientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Template.Domain.RecipePizzaAggregate.RecipePizza", null)
                         .WithMany()
-                        .HasForeignKey("RecipePizzasId")
+                        .HasForeignKey("RecipePizzaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -296,9 +445,7 @@ namespace Template.Command.Migrations
                 {
                     b.HasOne("Template.Domain.BorderAggregate.Border", "Borders")
                         .WithMany("Pizzas")
-                        .HasForeignKey("BorderIds")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BorderIds");
 
                     b.HasOne("Template.Domain.RecipePizzaAggregate.RecipePizza", "RecipePizza")
                         .WithMany("Pizzas")

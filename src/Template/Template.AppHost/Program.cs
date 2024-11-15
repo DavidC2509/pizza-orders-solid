@@ -15,10 +15,10 @@ var postgresDbNext = builder.ExecutionContext.IsRunMode ? serverPotgsres
 
 
 #region Pizza Solid
-builder.AddProject<Migrate>("login-solid-migration")
+builder.AddProject<Migrate>("login-pizza-migration")
     .WithReference(postgresDbNext).WaitFor(postgresDbNext);
 
-var api = builder.AddProject<Api>("login-solid")
+var api = builder.AddProject<Api>("login-pizza")
         .WithReference(postgresDbNext);
 
 #endregion

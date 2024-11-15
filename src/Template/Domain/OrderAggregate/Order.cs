@@ -20,6 +20,8 @@ namespace Template.Domain.OrderAggregate
         {
             Client = null!;
             Pizzas = [];
+            Id = Guid.NewGuid();
+
         }
     }
 }

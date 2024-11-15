@@ -16,5 +16,15 @@ namespace Template.Domain.BorderAggregate
             Description = string.Empty;
             Pizzas = [];
         }
+
+        internal Border(string description) : this()
+        {
+            Description = description;
+            Id = Guid.NewGuid();
+        }
+
+        public static Border CreateBorder(string description)
+        => new(description);
+
     }
 }

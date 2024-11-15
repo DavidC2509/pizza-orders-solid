@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <Folder Include="Command\" />
+    <Folder Include="Query\" />
   </ItemGroup>
 
   <ItemGroup>
