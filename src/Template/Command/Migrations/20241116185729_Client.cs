@@ -58,8 +58,7 @@ namespace Template.Command.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "gen_random_uuid()"),
                     Name = table.Column<string>(type: "text", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: false),
-                    Price = table.Column<decimal>(type: "numeric", nullable: false)
+                    Description = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -194,67 +193,67 @@ namespace Template.Command.Migrations
                 columns: new[] { "Id", "Description" },
                 values: new object[,]
                 {
-                    { new Guid("00703883-1d97-44a1-8f0d-a9e105549723"), "Borde con parmesano" },
-                    { new Guid("09854117-8297-4e39-9712-b158d9ff146d"), "Borde sin gluten" },
-                    { new Guid("0da62c40-ab3c-419f-9ff2-993d902ce5b4"), "Borde extra crujiente" },
-                    { new Guid("1949adc8-6567-41f0-b791-eb54137764c5"), "Borde con especias italianas" },
-                    { new Guid("2c2549e9-06b2-471c-a3ca-7a854b9de0ee"), "Borde relleno de pepperoni" },
-                    { new Guid("4a4731dc-c1ef-4231-a555-e9c986bc6e25"), "Borde de ajo y mantequilla" },
-                    { new Guid("506892bb-0b3f-409e-b91c-15e3ec750fe6"), "Borde de pan de ajo" },
-                    { new Guid("7285db60-d1f4-4fa6-a960-9e7fac32c146"), "Borde relleno de salchicha" },
-                    { new Guid("7d953028-4493-4a90-83c6-425a2b44eb36"), "Borde tradicional" },
-                    { new Guid("81f2b649-eab2-491c-b27b-42ebe1fc2026"), "Borde de queso" },
-                    { new Guid("83fd4bbe-f9cf-4411-9683-3f7b4e548fbc"), "Borde crujiente" },
-                    { new Guid("93ef8f1e-fdb4-4d5b-a582-ea442e1948cd"), "Sin Borde" },
-                    { new Guid("99978b8a-a4d5-4176-9072-fcadaa8cd67b"), "Borde relleno de jalapeños" },
-                    { new Guid("b3f53797-5a52-4a18-a071-93e73c66bec9"), "Borde con orégano y aceite de oliva" },
-                    { new Guid("dbb11233-1041-4bb9-8522-9be490e1f99c"), "Borde relleno de queso cheddar" },
-                    { new Guid("e071459b-a95c-4fb1-ac92-6bf3ccee555f"), "Borde de masa fina" }
+                    { new Guid("03eaa2ae-93f1-401c-a4c7-9d1702ffecfa"), "Borde de pan de ajo" },
+                    { new Guid("03eba4e3-41e7-42a2-aa2e-4ff9d41ad765"), "Borde relleno de jalapeños" },
+                    { new Guid("0dc798cd-4eeb-4fbe-8e3c-a8230d094178"), "Borde crujiente" },
+                    { new Guid("169689dd-a62c-4a52-bb3f-d595f953fd18"), "Borde tradicional" },
+                    { new Guid("1732894f-d900-4c66-a055-c262769fdefd"), "Borde relleno de queso cheddar" },
+                    { new Guid("178383be-a7ea-4ba9-ac23-4c0e988a4517"), "Borde relleno de pepperoni" },
+                    { new Guid("4b2dba3a-4c26-4128-ab4c-7d9a582d190e"), "Sin Borde" },
+                    { new Guid("5b680a4d-6bb9-471a-b439-8974897c6abb"), "Borde sin gluten" },
+                    { new Guid("856a7715-233f-481d-bb30-4f04733fcb97"), "Borde de ajo y mantequilla" },
+                    { new Guid("b4d8eed6-c7fc-46b3-8006-4d29276ae8b4"), "Borde relleno de salchicha" },
+                    { new Guid("ceb959eb-490e-43cd-977f-6d2694821a7d"), "Borde de masa fina" },
+                    { new Guid("d455b7d7-500e-495b-abf1-101e79f86828"), "Borde de queso" },
+                    { new Guid("e3ff1608-1d08-4124-901a-5fd362a4bdb3"), "Borde con especias italianas" },
+                    { new Guid("e6388a2f-cd62-40ae-b277-932230fa4d26"), "Borde con parmesano" },
+                    { new Guid("ed53fc75-ce37-4fe0-aafe-82c226a8c7e8"), "Borde con orégano y aceite de oliva" },
+                    { new Guid("f66987ef-6e0c-459c-afa1-7d7d4126001d"), "Borde extra crujiente" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Client",
                 columns: new[] { "Id", "CellPhone", "Email", "Name" },
-                values: new object[] { new Guid("806b8e1d-8de5-4884-a53d-eac49a8a241b"), "75324397", "davidFernando@gmil.com", "David" });
+                values: new object[] { new Guid("889c9cea-e6d0-4db0-94a0-c11b6e3b979a"), "75324397", "davidFernando@gmil.com", "David" });
 
             migrationBuilder.InsertData(
                 table: "Ingredients",
                 columns: new[] { "Id", "Amount", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("0489f895-910f-413c-936a-417afddbfad3"), 2.5m, "Pepperoni" },
-                    { new Guid("0657ff4a-84bf-4b0a-ab54-06fbb875af8a"), 1.0m, "Champiñones" },
-                    { new Guid("06a2162e-a3ef-4a9b-9b59-efe558cb3b98"), 2.0m, "Queso" },
-                    { new Guid("0e9216cf-e85c-4bf5-a057-f10a4b389ec5"), 1.5m, "Queso Parmesano" },
-                    { new Guid("135a8ae8-e779-40aa-8713-006670352c08"), 1.5m, "Piña" },
-                    { new Guid("4209713e-aa77-43f7-b8b1-eca4c0ad8ee9"), 0.8m, "Cebolla" },
-                    { new Guid("5d3e0af6-07d2-4396-8a9d-9362ecb1cedb"), 2.5m, "Pollo" },
-                    { new Guid("6226d057-efd4-4b0d-a03a-ac2633fb52cb"), 1.2m, "Aceitunas Negras" },
-                    { new Guid("7f4b8d20-ebaa-47bf-a527-aff38b9a7a18"), 2.0m, "Queso Mozzarella" },
-                    { new Guid("81e7fdbd-715a-41fb-a450-c49bcff1c0be"), 1.8m, "Salsa BBQ" },
-                    { new Guid("ae13fcb3-c066-46d6-881b-ccf1bcdddc5b"), 1.0m, "Tomates Cherry" },
-                    { new Guid("bb7d0566-48ff-4387-a0bc-aae579e8394c"), 2.8m, "Chorizo" },
-                    { new Guid("bb8ead18-a0fc-4d64-a006-70d3e7657c73"), 1.5m, "Salsa de Tomate" },
-                    { new Guid("c1acc73c-205c-442e-beb0-cd1ecdc895ee"), 0.7m, "Albahaca Fresca" },
-                    { new Guid("c83d7c12-6143-47e8-b28b-bb4c83451718"), 1.0m, "Jalapeños" },
-                    { new Guid("d1c0ece3-ac34-45d1-bba3-d8a9428b4bcf"), 1.5m, "Salsa Alfredo" },
-                    { new Guid("ea7ff681-d972-4ac9-a6de-a62c0727e1df"), 2.0m, "Anchoas" },
-                    { new Guid("f03d8891-170e-4e51-b5b9-8c9533b6e7b9"), 2.0m, "Jamón" },
-                    { new Guid("f5d80e36-05ba-4b66-88ca-1e6116a22de5"), 3.0m, "Carne de Res" },
-                    { new Guid("faf7f0ad-25b0-415b-8912-aaed1a4dd950"), 2.5m, "Tocino" }
+                    { new Guid("0c89840f-7a39-47db-a5e0-eedefecc55c0"), 1.2m, "Aceitunas Negras" },
+                    { new Guid("2149f625-bf01-494a-a988-fba3d8fe45d1"), 1.8m, "Salsa BBQ" },
+                    { new Guid("2257c4e3-d38d-454e-bf04-592463f2b6cc"), 2.0m, "Anchoas" },
+                    { new Guid("25fd06d3-ec4a-425b-a6ab-7e9873b1903b"), 2.0m, "Queso" },
+                    { new Guid("3315bf2d-4d4b-45be-bbf1-3c7a395fb6bb"), 2.0m, "Jamón" },
+                    { new Guid("6c0cb6da-ffe8-473e-abd0-fccf2d8cd932"), 0.7m, "Albahaca Fresca" },
+                    { new Guid("6db90ecb-080b-409f-8047-8cc75e0ec860"), 1.0m, "Champiñones" },
+                    { new Guid("91ad4938-f113-4b54-93ff-c56415e90277"), 1.5m, "Salsa Alfredo" },
+                    { new Guid("9a5262ee-d21e-439a-97e9-cb7b2bc7bd56"), 2.5m, "Tocino" },
+                    { new Guid("a13d58a7-9b05-40f4-aa72-da86782552c2"), 2.5m, "Pepperoni" },
+                    { new Guid("a36dcc7e-f8a2-4cbb-ba57-3c37dc7247b2"), 2.0m, "Queso Mozzarella" },
+                    { new Guid("a425ebbc-3bdb-45d0-8de6-eaeb8df03442"), 1.5m, "Queso Parmesano" },
+                    { new Guid("b206eaee-629e-439f-8658-e84c8d6fe300"), 0.8m, "Cebolla" },
+                    { new Guid("b38e49ad-149d-4c18-a717-9e6da504eb3d"), 1.0m, "Jalapeños" },
+                    { new Guid("b9cf9bfa-f173-409c-a2db-9b50837120cd"), 2.5m, "Pollo" },
+                    { new Guid("bfa4f04e-9c6b-4aca-b95e-284d349db2fb"), 1.5m, "Salsa de Tomate" },
+                    { new Guid("cdf21b5f-6d6e-4cea-8f31-30495698be50"), 2.8m, "Chorizo" },
+                    { new Guid("d41441e0-a6f2-42f3-9718-d233e0cbf0b4"), 1.5m, "Piña" },
+                    { new Guid("da7fe135-a41a-4a9e-859b-f25e3f3cf3b0"), 1.0m, "Tomates Cherry" },
+                    { new Guid("e8dbde95-9da9-4e12-a7cb-37f0fcbedd8d"), 3.0m, "Carne de Res" }
                 });
 
             migrationBuilder.InsertData(
                 table: "RecipePizza",
-                columns: new[] { "Id", "Description", "Name", "Price" },
+                columns: new[] { "Id", "Description", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("289b34c2-bcdf-45a0-8b5a-4f02068210b2"), "Pizza con jamón, piña y queso mozzarella.", "Pizza Hawaiian", 11.0m },
-                    { new Guid("3e7c4ca0-def6-4330-b183-a9c9aff98ed1"), "Pizza con pepperoni, tocino, carne de res y chorizo.", "Pizza Meat Lovers", 14.0m },
-                    { new Guid("9b29438f-528b-4d43-bdcc-ea8201b88ef1"), "Pizza con pepperoni y queso mozzarella.", "Pizza Pepperoni", 10.0m },
-                    { new Guid("a5969e99-f699-49c6-aa35-59915579b5ce"), "Pizza clásica con salsa de tomate, mozzarella y albahaca fresca.", "Pizza Margarita", 8.5m },
-                    { new Guid("be80bb47-1ef4-467d-8c7f-e77ed692b0fe"), "Pizza vegetariana con champiñones, pimientos, cebolla y aceitunas negras.", "Pizza Veggie Lovers", 10.0m },
-                    { new Guid("caed479b-1e3c-42b3-b284-bd18b1f8c0d6"), "Pizza con salsa BBQ, pollo, cebolla y queso mozzarella.", "Pizza BBQ Chicken", 12.0m }
+                    { new Guid("0b6bfa6a-524e-439e-b4ff-4e1ffd9789da"), "Pizza con pepperoni, tocino, carne de res y chorizo.", "Pizza Meat Lovers" },
+                    { new Guid("295322ec-2295-4032-abda-2286dd622e45"), "Pizza clásica con salsa de tomate, mozzarella y albahaca fresca.", "Pizza Margarita" },
+                    { new Guid("7e8de948-afa8-4f10-97f2-a3bb0cb9cb19"), "Pizza con jamón, piña y queso mozzarella.", "Pizza Hawaiian" },
+                    { new Guid("93bb7506-42d7-40e2-9a91-f7da469eada1"), "Pizza con pepperoni y queso mozzarella.", "Pizza Pepperoni" },
+                    { new Guid("97e55f1e-3d3b-4d34-a1f1-48b84171eb9e"), "Pizza vegetariana con champiñones, pimientos, cebolla y aceitunas negras.", "Pizza Veggie Lovers" },
+                    { new Guid("a1ac40ba-ad85-45dc-8f6c-9b226d8d8faf"), "Pizza con salsa BBQ, pollo, cebolla y queso mozzarella.", "Pizza BBQ Chicken" }
                 });
 
             migrationBuilder.InsertData(
@@ -262,26 +261,26 @@ namespace Template.Command.Migrations
                 columns: new[] { "IngredientId", "RecipePizzaId" },
                 values: new object[,]
                 {
-                    { new Guid("0489f895-910f-413c-936a-417afddbfad3"), new Guid("3e7c4ca0-def6-4330-b183-a9c9aff98ed1") },
-                    { new Guid("0489f895-910f-413c-936a-417afddbfad3"), new Guid("9b29438f-528b-4d43-bdcc-ea8201b88ef1") },
-                    { new Guid("0657ff4a-84bf-4b0a-ab54-06fbb875af8a"), new Guid("be80bb47-1ef4-467d-8c7f-e77ed692b0fe") },
-                    { new Guid("06a2162e-a3ef-4a9b-9b59-efe558cb3b98"), new Guid("9b29438f-528b-4d43-bdcc-ea8201b88ef1") },
-                    { new Guid("06a2162e-a3ef-4a9b-9b59-efe558cb3b98"), new Guid("a5969e99-f699-49c6-aa35-59915579b5ce") },
-                    { new Guid("135a8ae8-e779-40aa-8713-006670352c08"), new Guid("289b34c2-bcdf-45a0-8b5a-4f02068210b2") },
-                    { new Guid("4209713e-aa77-43f7-b8b1-eca4c0ad8ee9"), new Guid("be80bb47-1ef4-467d-8c7f-e77ed692b0fe") },
-                    { new Guid("4209713e-aa77-43f7-b8b1-eca4c0ad8ee9"), new Guid("caed479b-1e3c-42b3-b284-bd18b1f8c0d6") },
-                    { new Guid("5d3e0af6-07d2-4396-8a9d-9362ecb1cedb"), new Guid("caed479b-1e3c-42b3-b284-bd18b1f8c0d6") },
-                    { new Guid("6226d057-efd4-4b0d-a03a-ac2633fb52cb"), new Guid("be80bb47-1ef4-467d-8c7f-e77ed692b0fe") },
-                    { new Guid("7f4b8d20-ebaa-47bf-a527-aff38b9a7a18"), new Guid("289b34c2-bcdf-45a0-8b5a-4f02068210b2") },
-                    { new Guid("7f4b8d20-ebaa-47bf-a527-aff38b9a7a18"), new Guid("caed479b-1e3c-42b3-b284-bd18b1f8c0d6") },
-                    { new Guid("81e7fdbd-715a-41fb-a450-c49bcff1c0be"), new Guid("caed479b-1e3c-42b3-b284-bd18b1f8c0d6") },
-                    { new Guid("ae13fcb3-c066-46d6-881b-ccf1bcdddc5b"), new Guid("be80bb47-1ef4-467d-8c7f-e77ed692b0fe") },
-                    { new Guid("bb7d0566-48ff-4387-a0bc-aae579e8394c"), new Guid("3e7c4ca0-def6-4330-b183-a9c9aff98ed1") },
-                    { new Guid("bb8ead18-a0fc-4d64-a006-70d3e7657c73"), new Guid("a5969e99-f699-49c6-aa35-59915579b5ce") },
-                    { new Guid("c1acc73c-205c-442e-beb0-cd1ecdc895ee"), new Guid("a5969e99-f699-49c6-aa35-59915579b5ce") },
-                    { new Guid("f03d8891-170e-4e51-b5b9-8c9533b6e7b9"), new Guid("289b34c2-bcdf-45a0-8b5a-4f02068210b2") },
-                    { new Guid("f5d80e36-05ba-4b66-88ca-1e6116a22de5"), new Guid("3e7c4ca0-def6-4330-b183-a9c9aff98ed1") },
-                    { new Guid("faf7f0ad-25b0-415b-8912-aaed1a4dd950"), new Guid("3e7c4ca0-def6-4330-b183-a9c9aff98ed1") }
+                    { new Guid("0c89840f-7a39-47db-a5e0-eedefecc55c0"), new Guid("97e55f1e-3d3b-4d34-a1f1-48b84171eb9e") },
+                    { new Guid("2149f625-bf01-494a-a988-fba3d8fe45d1"), new Guid("a1ac40ba-ad85-45dc-8f6c-9b226d8d8faf") },
+                    { new Guid("25fd06d3-ec4a-425b-a6ab-7e9873b1903b"), new Guid("295322ec-2295-4032-abda-2286dd622e45") },
+                    { new Guid("25fd06d3-ec4a-425b-a6ab-7e9873b1903b"), new Guid("93bb7506-42d7-40e2-9a91-f7da469eada1") },
+                    { new Guid("3315bf2d-4d4b-45be-bbf1-3c7a395fb6bb"), new Guid("7e8de948-afa8-4f10-97f2-a3bb0cb9cb19") },
+                    { new Guid("6c0cb6da-ffe8-473e-abd0-fccf2d8cd932"), new Guid("295322ec-2295-4032-abda-2286dd622e45") },
+                    { new Guid("6db90ecb-080b-409f-8047-8cc75e0ec860"), new Guid("97e55f1e-3d3b-4d34-a1f1-48b84171eb9e") },
+                    { new Guid("9a5262ee-d21e-439a-97e9-cb7b2bc7bd56"), new Guid("0b6bfa6a-524e-439e-b4ff-4e1ffd9789da") },
+                    { new Guid("a13d58a7-9b05-40f4-aa72-da86782552c2"), new Guid("0b6bfa6a-524e-439e-b4ff-4e1ffd9789da") },
+                    { new Guid("a13d58a7-9b05-40f4-aa72-da86782552c2"), new Guid("93bb7506-42d7-40e2-9a91-f7da469eada1") },
+                    { new Guid("a36dcc7e-f8a2-4cbb-ba57-3c37dc7247b2"), new Guid("7e8de948-afa8-4f10-97f2-a3bb0cb9cb19") },
+                    { new Guid("a36dcc7e-f8a2-4cbb-ba57-3c37dc7247b2"), new Guid("a1ac40ba-ad85-45dc-8f6c-9b226d8d8faf") },
+                    { new Guid("b206eaee-629e-439f-8658-e84c8d6fe300"), new Guid("97e55f1e-3d3b-4d34-a1f1-48b84171eb9e") },
+                    { new Guid("b206eaee-629e-439f-8658-e84c8d6fe300"), new Guid("a1ac40ba-ad85-45dc-8f6c-9b226d8d8faf") },
+                    { new Guid("b9cf9bfa-f173-409c-a2db-9b50837120cd"), new Guid("a1ac40ba-ad85-45dc-8f6c-9b226d8d8faf") },
+                    { new Guid("bfa4f04e-9c6b-4aca-b95e-284d349db2fb"), new Guid("295322ec-2295-4032-abda-2286dd622e45") },
+                    { new Guid("cdf21b5f-6d6e-4cea-8f31-30495698be50"), new Guid("0b6bfa6a-524e-439e-b4ff-4e1ffd9789da") },
+                    { new Guid("d41441e0-a6f2-42f3-9718-d233e0cbf0b4"), new Guid("7e8de948-afa8-4f10-97f2-a3bb0cb9cb19") },
+                    { new Guid("da7fe135-a41a-4a9e-859b-f25e3f3cf3b0"), new Guid("97e55f1e-3d3b-4d34-a1f1-48b84171eb9e") },
+                    { new Guid("e8dbde95-9da9-4e12-a7cb-37f0fcbedd8d"), new Guid("0b6bfa6a-524e-439e-b4ff-4e1ffd9789da") }
                 });
 
             migrationBuilder.CreateIndex(

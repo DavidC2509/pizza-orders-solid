@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "5e94f2fd-6e6b-4be1-ad93-90ce977bbfd9",
+		"name": "Diplomado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37690628"
+	},
+	"item": [
+		{
+			"name": "GetBorder",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7176/api/border/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"border",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetClients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7176/api/clients/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"clients",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetIngredients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7176/api/ingredient/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"ingredient",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7176/api/orden/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"orden",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetRecipePizza",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7176/api/recipe-pizza/list",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"recipe-pizza",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateOrderRecipePizza",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pizzas\": [\r\n    {\r\n      \"isPersonalizate\": false,\r\n      \"borderId\": \"03eaa2ae-93f1-401c-a4c7-9d1702ffecfa\",\r\n      \"recipeId\": \"0b6bfa6a-524e-439e-b4ff-4e1ffd9789da\"\r\n    }\r\n  ],\r\n  \"clientId\": \"889c9cea-e6d0-4db0-94a0-c11b6e3b979a\",\r\n  \"addres\": \"3 anillo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7176/api/orden",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"orden"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePizzaPersonalizate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"pizzas\": [\r\n    {\r\n      \"isPersonalizate\": true,\r\n      \"borderId\": \"03eaa2ae-93f1-401c-a4c7-9d1702ffecfa\",\r\n      \"ingredientsId\": [\r\n        \"0c89840f-7a39-47db-a5e0-eedefecc55c0\",\"2149f625-bf01-494a-a988-fba3d8fe45d1\",\"2257c4e3-d38d-454e-bf04-592463f2b6cc\"\r\n      ]\r\n    }\r\n  ],\r\n  \"clientId\": \"889c9cea-e6d0-4db0-94a0-c11b6e3b979a\",\r\n  \"addres\": \"4 anillo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7176/api/orden",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7176",
+					"path": [
+						"api",
+						"orden"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

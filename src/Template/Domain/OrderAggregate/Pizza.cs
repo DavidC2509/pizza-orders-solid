@@ -28,10 +28,16 @@ namespace Template.Domain.OrderAggregate
             Name = string.Empty;
             Ingredients = [];
             Order = null!;
+            CountPizza = 1;
         }
 
         public static Pizza CreatePizzaSinDecorar()
         => new();
+
+        public void SetCount(int count)
+        {
+            CountPizza = count;
+        }
 
         public void SetName(string name)
         {
@@ -63,5 +69,9 @@ namespace Template.Domain.OrderAggregate
             Ingredients.Add(ingredient);
         }
 
+        public void SetIngredients(ICollection<Ingredient> ingredients)
+        {
+            Ingredients = ingredients;
+        }
     }
 }

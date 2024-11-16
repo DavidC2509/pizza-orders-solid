@@ -26,6 +26,10 @@ namespace Template.Services.Builder
             _builder.SetPersonalization(true); // Indica que es personalizada
             _builder.SetIngredients(ingredients); // Se puede añadir una lista de ingredientes
             _builder.SetBorder(border);
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday || DateTime.Now.DayOfWeek == DayOfWeek.Wednesday)
+            {
+                _builder.SetCountPizza(2);
+            }
         }
 
         public void BuildRecipePizza(RecipePizza recipe, Border border)
@@ -37,6 +41,12 @@ namespace Template.Services.Builder
             _builder.SetPersonalization(false); // Indica que es preestablecida
             _builder.SetRecipe(recipe); // Establece la receta
             _builder.SetBorder(border);
+
+            if (DateTime.Now.DayOfWeek == DayOfWeek.Tuesday || DateTime.Now.DayOfWeek == DayOfWeek.Wednesday)
+            {
+                _builder.SetCountPizza(2);
+            }
+
         }
 
         public Pizza ObtenerPizza()

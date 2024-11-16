@@ -25,10 +25,40 @@ namespace Template.Domain.OrderAggregate
             Pizzas = pizzas;
             IsFreeDeviliry = isFreeDelivery;
             DeliveryOrders = delivery;
-            OrderDate = DateTime.Now;
+            OrderDate = DateTime.UtcNow;
+            CalculateTotal();
         }
 
         public static Order CreateOrder(Client client, List<Pizza> pizzas, bool isFreeDelivery, DeliveryOrder delivery)
             => new(client, pizzas, isFreeDelivery, delivery);
+
+        public void CalculateTotal()
+        {
+            decimal total = 0;
+
+            foreach (var pizza in Pizzas)
+            {
+                decimal pizzaTotal = pizza.AmountBase;
+
+                if (pizza.IsPersonalizate)
+                {
+                    // Sumar ingredientes personalizados
+                    pizzaTotal += pizza.Ingredients.Sum(i => i.Amount);
+                }
+                else if (pizza.RecipePizza != null)
+                {
+                    if (pizza.RecipePizza.Ingredients != null)
+                    {
+                        pizzaTotal += pizza.RecipePizza.Ingredients.Sum(i => i.Amount);
+                    }
+                }
+
+                // Multiplicar por la cantidad de pizzas
+                total += pizzaTotal * pizza.CountPizza;
+            }
+
+            Total = total;
+        }
+
     }
 }

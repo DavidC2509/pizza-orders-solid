@@ -17,6 +17,7 @@ namespace Template.Services.Services
         public void SetBaseAmount(decimal amount) => _pizza.SetAmount(amount);
         public void SetPersonalization(bool isPersonalizate) => _pizza.SetIsPersonalizate(isPersonalizate);
         public void SetBorder(Border border) => _pizza.SetBorder(border);
+        public void SetCountPizza(int count) => _pizza.SetCount(count);
         public void SetRecipe(RecipePizza recipe)
         {
             if (_pizza.IsPersonalizate)
@@ -28,18 +29,12 @@ namespace Template.Services.Services
 
         public void SetIngredients(ICollection<Ingredient> ingredients)
         {
-            if (_pizza.IsPersonalizate)
-            {
-                throw new InvalidOperationException("Las pizzas preestablecidas no pueden tener ingredientes personalizados.");
-            }
+            _pizza.SetIngredients(ingredients);
         }
 
         public void AddIngredient(Ingredient ingredient)
         {
-            if (_pizza.IsPersonalizate)
-            {
-                throw new InvalidOperationException("Las pizzas preestablecidas no pueden tener ingredientes personalizados.");
-            }
+            _pizza.AddIngredients(ingredient);
         }
 
     }

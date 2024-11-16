@@ -16,6 +16,8 @@ namespace Template.Domain.Services
         void SetIngredients(ICollection<Ingredient> ingredients);
         void SetBorder(Border border);
         void AddIngredient(Ingredient ingredient);
+        void SetCountPizza(int count);
+
         Pizza Build();
     }
 }

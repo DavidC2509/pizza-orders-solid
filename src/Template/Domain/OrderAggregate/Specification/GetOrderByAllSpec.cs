@@ -6,8 +6,12 @@ namespace Template.Domain.OrderAggregate.Specification
     {
         public GetOrderByAllSpec()
         {
-            Query.Include(order => order.DeliveryOrders).Include(order => order.Pizzas);
-            //.ThenInclude(piiza => piiza.Ingredients);
+            Query.Include(order => order.Pizzas)
+                 .ThenInclude(pizza => pizza.Ingredients)
+                 .Include(order => order.Pizzas)
+                 .ThenInclude(pizza => pizza.RecipePizza)
+                 .Include(order => order.Pizzas)
+                 .ThenInclude(pizza => pizza.Borders);
         }
     }
 }

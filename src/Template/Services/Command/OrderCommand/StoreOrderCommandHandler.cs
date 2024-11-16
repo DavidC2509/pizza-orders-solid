@@ -44,7 +44,7 @@ namespace Template.Services.Command.OrderCommand
             var deliveryAddres = createAddres(request.Addres);
             var clientSpec = new GetClientByIdSpec(request.ClientId);
             var client = await _clientRepository.FirstOrDefaultAsync(clientSpec, cancellationToken);
-            var order = Order.CreateOrder(client, pizzas, true, deliveryAddres);
+            var order = Order.CreateOrder(client, pizzas, IsThursday(), deliveryAddres);
             _repository.Update(order);
             await _repository.UnitOfWork.SaveEntitiesAsync(cancellationToken);
             return _mapper.Map<OrdersModel>(order);
@@ -71,6 +71,7 @@ namespace Template.Services.Command.OrderCommand
                     var recipePizza = await _recipeRepository.FirstOrDefaultAsync(recipeSpec, cancellationToken);
                     _pizzaDirector.BuildRecipePizza(recipePizza, border);
                 }
+
                 listPizza.Add(_pizzaDirector.ObtenerPizza());
             }
             return listPizza;
@@ -78,8 +79,15 @@ namespace Template.Services.Command.OrderCommand
 
         public DeliveryOrder createAddres(string addres)
         {
-            var deliveryOrder = DeliveryOrder.CreateDeliveryOrder(addres, true);
+            var deliveryOrder = DeliveryOrder.CreateDeliveryOrder(addres, IsThursday());
             return deliveryOrder;
         }
+
+        // No me dio Tiempo usar patron
+        public bool IsThursday()
+        {
+            return DateTime.Now.DayOfWeek == DayOfWeek.Thursday;
+        }
+
     }
 }

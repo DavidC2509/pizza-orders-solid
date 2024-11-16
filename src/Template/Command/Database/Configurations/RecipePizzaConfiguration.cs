@@ -21,12 +21,12 @@ namespace Template.Command.Database.Configurations
               .HasForeignKey(e => e.RecipePizzaId);
 
             // Datos iniciales de recetas
-            var margarita = RecipePizza.CreateRecipePizza("Pizza Margarita", "Pizza clásica con salsa de tomate, mozzarella y albahaca fresca.", 8.5m);
-            var pepperoni = RecipePizza.CreateRecipePizza("Pizza Pepperoni", "Pizza con pepperoni y queso mozzarella.", 10.0m);
-            var bbqChicken = RecipePizza.CreateRecipePizza("Pizza BBQ Chicken", "Pizza con salsa BBQ, pollo, cebolla y queso mozzarella.", 12.0m);
-            var hawaiian = RecipePizza.CreateRecipePizza("Pizza Hawaiian", "Pizza con jamón, piña y queso mozzarella.", 11.0m);
-            var veggieLovers = RecipePizza.CreateRecipePizza("Pizza Veggie Lovers", "Pizza vegetariana con champiñones, pimientos, cebolla y aceitunas negras.", 10.0m);
-            var meatLovers = RecipePizza.CreateRecipePizza("Pizza Meat Lovers", "Pizza con pepperoni, tocino, carne de res y chorizo.", 14.0m);
+            var margarita = RecipePizza.CreateRecipePizza("Pizza Margarita", "Pizza clásica con salsa de tomate, mozzarella y albahaca fresca.");
+            var pepperoni = RecipePizza.CreateRecipePizza("Pizza Pepperoni", "Pizza con pepperoni y queso mozzarella.");
+            var bbqChicken = RecipePizza.CreateRecipePizza("Pizza BBQ Chicken", "Pizza con salsa BBQ, pollo, cebolla y queso mozzarella.");
+            var hawaiian = RecipePizza.CreateRecipePizza("Pizza Hawaiian", "Pizza con jamón, piña y queso mozzarella.");
+            var veggieLovers = RecipePizza.CreateRecipePizza("Pizza Veggie Lovers", "Pizza vegetariana con champiñones, pimientos, cebolla y aceitunas negras.");
+            var meatLovers = RecipePizza.CreateRecipePizza("Pizza Meat Lovers", "Pizza con pepperoni, tocino, carne de res y chorizo.");
 
             builder.HasData(margarita, pepperoni, bbqChicken, hawaiian, veggieLovers, meatLovers);
 
