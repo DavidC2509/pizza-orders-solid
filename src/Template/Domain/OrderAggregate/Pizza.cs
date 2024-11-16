@@ -38,6 +38,11 @@ namespace Template.Domain.OrderAggregate
             Name = name;
         }
 
+        public void SetAmount(decimal amountBase)
+        {
+            AmountBase = amountBase;
+        }
+
         public void SetIsPersonalizate(bool isPersonalizate)
         {
             IsPersonalizate = isPersonalizate;

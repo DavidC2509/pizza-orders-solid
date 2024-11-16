@@ -7,6 +7,7 @@ namespace Template.Domain.Services
 {
     public interface IPizzaBuilder
     {
+        PizzaBuilderType UsePizzaBuilder { get; }
         void Reset();
         void SetName(string name);
         void SetBaseAmount(decimal amount);

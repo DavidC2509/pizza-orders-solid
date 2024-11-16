@@ -54,103 +54,103 @@ namespace Template.Command.Migrations
                     b.HasData(
                         new
                         {
-                            IngredientId = new Guid("ba523c79-b2f1-41d7-a58d-a36c9616532f"),
-                            RecipePizzaId = new Guid("e4f3b841-7e6d-45b4-9b7b-a2fd5506b5c8")
+                            IngredientId = new Guid("06a2162e-a3ef-4a9b-9b59-efe558cb3b98"),
+                            RecipePizzaId = new Guid("a5969e99-f699-49c6-aa35-59915579b5ce")
                         },
                         new
                         {
-                            IngredientId = new Guid("5402502d-04c5-4939-a9c9-2928f7c5a18f"),
-                            RecipePizzaId = new Guid("e4f3b841-7e6d-45b4-9b7b-a2fd5506b5c8")
+                            IngredientId = new Guid("bb8ead18-a0fc-4d64-a006-70d3e7657c73"),
+                            RecipePizzaId = new Guid("a5969e99-f699-49c6-aa35-59915579b5ce")
                         },
                         new
                         {
-                            IngredientId = new Guid("6573c568-d0f8-41e1-9658-bff0935a36e4"),
-                            RecipePizzaId = new Guid("e4f3b841-7e6d-45b4-9b7b-a2fd5506b5c8")
+                            IngredientId = new Guid("c1acc73c-205c-442e-beb0-cd1ecdc895ee"),
+                            RecipePizzaId = new Guid("a5969e99-f699-49c6-aa35-59915579b5ce")
                         },
                         new
                         {
-                            IngredientId = new Guid("ba523c79-b2f1-41d7-a58d-a36c9616532f"),
-                            RecipePizzaId = new Guid("513015e2-ed64-4990-8f4e-136a1115959d")
+                            IngredientId = new Guid("06a2162e-a3ef-4a9b-9b59-efe558cb3b98"),
+                            RecipePizzaId = new Guid("9b29438f-528b-4d43-bdcc-ea8201b88ef1")
                         },
                         new
                         {
-                            IngredientId = new Guid("85dc4e31-3661-4f42-a552-f4e829cd765f"),
-                            RecipePizzaId = new Guid("513015e2-ed64-4990-8f4e-136a1115959d")
+                            IngredientId = new Guid("0489f895-910f-413c-936a-417afddbfad3"),
+                            RecipePizzaId = new Guid("9b29438f-528b-4d43-bdcc-ea8201b88ef1")
                         },
                         new
                         {
-                            IngredientId = new Guid("40d0560c-c3c6-4553-b297-0d2b024cf249"),
-                            RecipePizzaId = new Guid("e0cd7c0d-36b7-4b70-b172-64b9f9c031d4")
+                            IngredientId = new Guid("81e7fdbd-715a-41fb-a450-c49bcff1c0be"),
+                            RecipePizzaId = new Guid("caed479b-1e3c-42b3-b284-bd18b1f8c0d6")
                         },
                         new
                         {
-                            IngredientId = new Guid("4dac0e72-010b-4a6c-ae9b-e4d20c7664e5"),
-                            RecipePizzaId = new Guid("e0cd7c0d-36b7-4b70-b172-64b9f9c031d4")
+                            IngredientId = new Guid("5d3e0af6-07d2-4396-8a9d-9362ecb1cedb"),
+                            RecipePizzaId = new Guid("caed479b-1e3c-42b3-b284-bd18b1f8c0d6")
                         },
                         new
                         {
-                            IngredientId = new Guid("14a02fdf-8de4-49ef-98df-59d8e8d308b3"),
-                            RecipePizzaId = new Guid("e0cd7c0d-36b7-4b70-b172-64b9f9c031d4")
+                            IngredientId = new Guid("4209713e-aa77-43f7-b8b1-eca4c0ad8ee9"),
+                            RecipePizzaId = new Guid("caed479b-1e3c-42b3-b284-bd18b1f8c0d6")
                         },
                         new
                         {
-                            IngredientId = new Guid("a9248381-23db-4de3-8d47-7ad2c2f9bd95"),
-                            RecipePizzaId = new Guid("e0cd7c0d-36b7-4b70-b172-64b9f9c031d4")
+                            IngredientId = new Guid("7f4b8d20-ebaa-47bf-a527-aff38b9a7a18"),
+                            RecipePizzaId = new Guid("caed479b-1e3c-42b3-b284-bd18b1f8c0d6")
                         },
                         new
                         {
-                            IngredientId = new Guid("26590268-5b95-4336-bf14-b9db1c6534ce"),
-                            RecipePizzaId = new Guid("fab5a4fb-8964-40a9-83b1-a11ac5737499")
+                            IngredientId = new Guid("f03d8891-170e-4e51-b5b9-8c9533b6e7b9"),
+                            RecipePizzaId = new Guid("289b34c2-bcdf-45a0-8b5a-4f02068210b2")
                         },
                         new
                         {
-                            IngredientId = new Guid("d25d38ec-bec5-4554-9220-7f0a7e2cf8c3"),
-                            RecipePizzaId = new Guid("fab5a4fb-8964-40a9-83b1-a11ac5737499")
+                            IngredientId = new Guid("135a8ae8-e779-40aa-8713-006670352c08"),
+                            RecipePizzaId = new Guid("289b34c2-bcdf-45a0-8b5a-4f02068210b2")
                         },
                         new
                         {
-                            IngredientId = new Guid("a9248381-23db-4de3-8d47-7ad2c2f9bd95"),
-                            RecipePizzaId = new Guid("fab5a4fb-8964-40a9-83b1-a11ac5737499")
+                            IngredientId = new Guid("7f4b8d20-ebaa-47bf-a527-aff38b9a7a18"),
+                            RecipePizzaId = new Guid("289b34c2-bcdf-45a0-8b5a-4f02068210b2")
                         },
                         new
                         {
-                            IngredientId = new Guid("5fd6e567-eab7-4af2-99cb-1a2a688e4128"),
-                            RecipePizzaId = new Guid("ca207b5f-28ef-4156-a4e2-7baebca48748")
+                            IngredientId = new Guid("0657ff4a-84bf-4b0a-ab54-06fbb875af8a"),
+                            RecipePizzaId = new Guid("be80bb47-1ef4-467d-8c7f-e77ed692b0fe")
                         },
                         new
                         {
-                            IngredientId = new Guid("14a02fdf-8de4-49ef-98df-59d8e8d308b3"),
-                            RecipePizzaId = new Guid("ca207b5f-28ef-4156-a4e2-7baebca48748")
+                            IngredientId = new Guid("4209713e-aa77-43f7-b8b1-eca4c0ad8ee9"),
+                            RecipePizzaId = new Guid("be80bb47-1ef4-467d-8c7f-e77ed692b0fe")
                         },
                         new
                         {
-                            IngredientId = new Guid("d409fcab-4dd9-4f8c-a149-8cf4ca420897"),
-                            RecipePizzaId = new Guid("ca207b5f-28ef-4156-a4e2-7baebca48748")
+                            IngredientId = new Guid("6226d057-efd4-4b0d-a03a-ac2633fb52cb"),
+                            RecipePizzaId = new Guid("be80bb47-1ef4-467d-8c7f-e77ed692b0fe")
                         },
                         new
                         {
-                            IngredientId = new Guid("750730bb-597c-49d3-9979-aa3afa9ab97e"),
-                            RecipePizzaId = new Guid("ca207b5f-28ef-4156-a4e2-7baebca48748")
+                            IngredientId = new Guid("ae13fcb3-c066-46d6-881b-ccf1bcdddc5b"),
+                            RecipePizzaId = new Guid("be80bb47-1ef4-467d-8c7f-e77ed692b0fe")
                         },
                         new
                         {
-                            IngredientId = new Guid("85dc4e31-3661-4f42-a552-f4e829cd765f"),
-                            RecipePizzaId = new Guid("37470a01-52f0-4552-b62b-4d6d4fb93fb8")
+                            IngredientId = new Guid("0489f895-910f-413c-936a-417afddbfad3"),
+                            RecipePizzaId = new Guid("3e7c4ca0-def6-4330-b183-a9c9aff98ed1")
                         },
                         new
                         {
-                            IngredientId = new Guid("33cadc7e-f861-490f-b3ec-d4ebc4c7cf21"),
-                            RecipePizzaId = new Guid("37470a01-52f0-4552-b62b-4d6d4fb93fb8")
+                            IngredientId = new Guid("faf7f0ad-25b0-415b-8912-aaed1a4dd950"),
+                            RecipePizzaId = new Guid("3e7c4ca0-def6-4330-b183-a9c9aff98ed1")
                         },
                         new
                         {
-                            IngredientId = new Guid("58a3defc-5963-4bdf-b3fe-7cbd61d681e4"),
-                            RecipePizzaId = new Guid("37470a01-52f0-4552-b62b-4d6d4fb93fb8")
+                            IngredientId = new Guid("f5d80e36-05ba-4b66-88ca-1e6116a22de5"),
+                            RecipePizzaId = new Guid("3e7c4ca0-def6-4330-b183-a9c9aff98ed1")
                         },
                         new
                         {
-                            IngredientId = new Guid("ccc0f882-51f1-4ea1-bc3e-681bd6ba8b96"),
-                            RecipePizzaId = new Guid("37470a01-52f0-4552-b62b-4d6d4fb93fb8")
+                            IngredientId = new Guid("bb7d0566-48ff-4387-a0bc-aae579e8394c"),
+                            RecipePizzaId = new Guid("3e7c4ca0-def6-4330-b183-a9c9aff98ed1")
                         });
                 });
 
@@ -172,82 +172,82 @@ namespace Template.Command.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("003f2dc0-b273-486c-b952-76d0e8786ebd"),
+                            Id = new Guid("93ef8f1e-fdb4-4d5b-a582-ea442e1948cd"),
                             Description = "Sin Borde"
                         },
                         new
                         {
-                            Id = new Guid("1464dd9d-4448-4344-9350-c6a5be5bdd84"),
+                            Id = new Guid("81f2b649-eab2-491c-b27b-42ebe1fc2026"),
                             Description = "Borde de queso"
                         },
                         new
                         {
-                            Id = new Guid("dd9f9761-699f-4ae8-bb48-adbecdda1c44"),
+                            Id = new Guid("2c2549e9-06b2-471c-a3ca-7a854b9de0ee"),
                             Description = "Borde relleno de pepperoni"
                         },
                         new
                         {
-                            Id = new Guid("42f20f20-4328-4f4e-a4f1-1472dcff201e"),
+                            Id = new Guid("4a4731dc-c1ef-4231-a555-e9c986bc6e25"),
                             Description = "Borde de ajo y mantequilla"
                         },
                         new
                         {
-                            Id = new Guid("eae6ff13-f7fa-46eb-808e-9b006e698488"),
+                            Id = new Guid("83fd4bbe-f9cf-4411-9683-3f7b4e548fbc"),
                             Description = "Borde crujiente"
                         },
                         new
                         {
-                            Id = new Guid("58fbc043-4776-4af8-b398-0d77404f075d"),
+                            Id = new Guid("e071459b-a95c-4fb1-ac92-6bf3ccee555f"),
                             Description = "Borde de masa fina"
                         },
                         new
                         {
-                            Id = new Guid("fa8b702b-203f-4de2-9aec-3291cc1bf9a8"),
+                            Id = new Guid("00703883-1d97-44a1-8f0d-a9e105549723"),
                             Description = "Borde con parmesano"
                         },
                         new
                         {
-                            Id = new Guid("29b3e47e-3eb9-4c5e-be9a-7f71b4e14f09"),
+                            Id = new Guid("99978b8a-a4d5-4176-9072-fcadaa8cd67b"),
                             Description = "Borde relleno de jalapeños"
                         },
                         new
                         {
-                            Id = new Guid("0cef82d9-b8d6-4a1d-94ae-08aefcbcadf7"),
+                            Id = new Guid("dbb11233-1041-4bb9-8522-9be490e1f99c"),
                             Description = "Borde relleno de queso cheddar"
                         },
                         new
                         {
-                            Id = new Guid("c96ac994-c02a-4b59-af0f-4561718de601"),
+                            Id = new Guid("506892bb-0b3f-409e-b91c-15e3ec750fe6"),
                             Description = "Borde de pan de ajo"
                         },
                         new
                         {
-                            Id = new Guid("4809532b-d38c-4ace-b05a-47b06325c161"),
+                            Id = new Guid("09854117-8297-4e39-9712-b158d9ff146d"),
                             Description = "Borde sin gluten"
                         },
                         new
                         {
-                            Id = new Guid("16ea2589-4bd3-4a06-972c-6d8eb9490a3d"),
+                            Id = new Guid("7d953028-4493-4a90-83c6-425a2b44eb36"),
                             Description = "Borde tradicional"
                         },
                         new
                         {
-                            Id = new Guid("1840bad6-3f22-4761-b95e-92e032ea0581"),
+                            Id = new Guid("7285db60-d1f4-4fa6-a960-9e7fac32c146"),
                             Description = "Borde relleno de salchicha"
                         },
                         new
                         {
-                            Id = new Guid("0e3054f7-7f66-4540-ac6e-3d57c140d930"),
+                            Id = new Guid("0da62c40-ab3c-419f-9ff2-993d902ce5b4"),
                             Description = "Borde extra crujiente"
                         },
                         new
                         {
-                            Id = new Guid("6b4f140d-37b8-4732-9760-1c160c05ed8d"),
+                            Id = new Guid("1949adc8-6567-41f0-b791-eb54137764c5"),
                             Description = "Borde con especias italianas"
                         },
                         new
                         {
-                            Id = new Guid("ef52ceb3-4ad8-45ce-ad65-fe164a02b8f6"),
+                            Id = new Guid("b3f53797-5a52-4a18-a071-93e73c66bec9"),
                             Description = "Borde con orégano y aceite de oliva"
                         });
                 });
@@ -278,7 +278,7 @@ namespace Template.Command.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("28f1aa92-81d0-47f8-9bee-3464466b9b31"),
+                            Id = new Guid("806b8e1d-8de5-4884-a53d-eac49a8a241b"),
                             CellPhone = "75324397",
                             Email = "davidFernando@gmil.com",
                             Name = "David"
@@ -306,121 +306,121 @@ namespace Template.Command.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ba523c79-b2f1-41d7-a58d-a36c9616532f"),
+                            Id = new Guid("06a2162e-a3ef-4a9b-9b59-efe558cb3b98"),
                             Amount = 2.0m,
                             Name = "Queso"
                         },
                         new
                         {
-                            Id = new Guid("5402502d-04c5-4939-a9c9-2928f7c5a18f"),
+                            Id = new Guid("bb8ead18-a0fc-4d64-a006-70d3e7657c73"),
                             Amount = 1.5m,
                             Name = "Salsa de Tomate"
                         },
                         new
                         {
-                            Id = new Guid("85dc4e31-3661-4f42-a552-f4e829cd765f"),
+                            Id = new Guid("0489f895-910f-413c-936a-417afddbfad3"),
                             Amount = 2.5m,
                             Name = "Pepperoni"
                         },
                         new
                         {
-                            Id = new Guid("5fd6e567-eab7-4af2-99cb-1a2a688e4128"),
+                            Id = new Guid("0657ff4a-84bf-4b0a-ab54-06fbb875af8a"),
                             Amount = 1.0m,
                             Name = "Champiñones"
                         },
                         new
                         {
-                            Id = new Guid("14a02fdf-8de4-49ef-98df-59d8e8d308b3"),
+                            Id = new Guid("4209713e-aa77-43f7-b8b1-eca4c0ad8ee9"),
                             Amount = 0.8m,
                             Name = "Cebolla"
                         },
                         new
                         {
-                            Id = new Guid("d409fcab-4dd9-4f8c-a149-8cf4ca420897"),
+                            Id = new Guid("6226d057-efd4-4b0d-a03a-ac2633fb52cb"),
                             Amount = 1.2m,
                             Name = "Aceitunas Negras"
                         },
                         new
                         {
-                            Id = new Guid("26590268-5b95-4336-bf14-b9db1c6534ce"),
+                            Id = new Guid("f03d8891-170e-4e51-b5b9-8c9533b6e7b9"),
                             Amount = 2.0m,
                             Name = "Jamón"
                         },
                         new
                         {
-                            Id = new Guid("d25d38ec-bec5-4554-9220-7f0a7e2cf8c3"),
+                            Id = new Guid("135a8ae8-e779-40aa-8713-006670352c08"),
                             Amount = 1.5m,
                             Name = "Piña"
                         },
                         new
                         {
-                            Id = new Guid("33cadc7e-f861-490f-b3ec-d4ebc4c7cf21"),
+                            Id = new Guid("faf7f0ad-25b0-415b-8912-aaed1a4dd950"),
                             Amount = 2.5m,
                             Name = "Tocino"
                         },
                         new
                         {
-                            Id = new Guid("4dac0e72-010b-4a6c-ae9b-e4d20c7664e5"),
+                            Id = new Guid("5d3e0af6-07d2-4396-8a9d-9362ecb1cedb"),
                             Amount = 2.5m,
                             Name = "Pollo"
                         },
                         new
                         {
-                            Id = new Guid("58a3defc-5963-4bdf-b3fe-7cbd61d681e4"),
+                            Id = new Guid("f5d80e36-05ba-4b66-88ca-1e6116a22de5"),
                             Amount = 3.0m,
                             Name = "Carne de Res"
                         },
                         new
                         {
-                            Id = new Guid("40d0560c-c3c6-4553-b297-0d2b024cf249"),
+                            Id = new Guid("81e7fdbd-715a-41fb-a450-c49bcff1c0be"),
                             Amount = 1.8m,
                             Name = "Salsa BBQ"
                         },
                         new
                         {
-                            Id = new Guid("a9248381-23db-4de3-8d47-7ad2c2f9bd95"),
+                            Id = new Guid("7f4b8d20-ebaa-47bf-a527-aff38b9a7a18"),
                             Amount = 2.0m,
                             Name = "Queso Mozzarella"
                         },
                         new
                         {
-                            Id = new Guid("b5a0e248-2398-4908-a597-0e0318fda2b2"),
+                            Id = new Guid("0e9216cf-e85c-4bf5-a057-f10a4b389ec5"),
                             Amount = 1.5m,
                             Name = "Queso Parmesano"
                         },
                         new
                         {
-                            Id = new Guid("8bec8b77-a1be-4596-9b7d-e1874edf5fa7"),
+                            Id = new Guid("d1c0ece3-ac34-45d1-bba3-d8a9428b4bcf"),
                             Amount = 1.5m,
                             Name = "Salsa Alfredo"
                         },
                         new
                         {
-                            Id = new Guid("6573c568-d0f8-41e1-9658-bff0935a36e4"),
+                            Id = new Guid("c1acc73c-205c-442e-beb0-cd1ecdc895ee"),
                             Amount = 0.7m,
                             Name = "Albahaca Fresca"
                         },
                         new
                         {
-                            Id = new Guid("750730bb-597c-49d3-9979-aa3afa9ab97e"),
+                            Id = new Guid("ae13fcb3-c066-46d6-881b-ccf1bcdddc5b"),
                             Amount = 1.0m,
                             Name = "Tomates Cherry"
                         },
                         new
                         {
-                            Id = new Guid("ccc0f882-51f1-4ea1-bc3e-681bd6ba8b96"),
+                            Id = new Guid("bb7d0566-48ff-4387-a0bc-aae579e8394c"),
                             Amount = 2.8m,
                             Name = "Chorizo"
                         },
                         new
                         {
-                            Id = new Guid("12d9836a-0c9e-41b6-acff-53b35aa5c3c9"),
+                            Id = new Guid("c83d7c12-6143-47e8-b28b-bb4c83451718"),
                             Amount = 1.0m,
                             Name = "Jalapeños"
                         },
                         new
                         {
-                            Id = new Guid("4b28cdfa-0f5c-4820-98ed-4acc132c3299"),
+                            Id = new Guid("ea7ff681-d972-4ac9-a6de-a62c0727e1df"),
                             Amount = 2.0m,
                             Name = "Anchoas"
                         });
@@ -539,42 +539,42 @@ namespace Template.Command.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("e4f3b841-7e6d-45b4-9b7b-a2fd5506b5c8"),
+                            Id = new Guid("a5969e99-f699-49c6-aa35-59915579b5ce"),
                             Description = "Pizza clásica con salsa de tomate, mozzarella y albahaca fresca.",
                             Name = "Pizza Margarita",
                             Price = 8.5m
                         },
                         new
                         {
-                            Id = new Guid("513015e2-ed64-4990-8f4e-136a1115959d"),
+                            Id = new Guid("9b29438f-528b-4d43-bdcc-ea8201b88ef1"),
                             Description = "Pizza con pepperoni y queso mozzarella.",
                             Name = "Pizza Pepperoni",
                             Price = 10.0m
                         },
                         new
                         {
-                            Id = new Guid("e0cd7c0d-36b7-4b70-b172-64b9f9c031d4"),
+                            Id = new Guid("caed479b-1e3c-42b3-b284-bd18b1f8c0d6"),
                             Description = "Pizza con salsa BBQ, pollo, cebolla y queso mozzarella.",
                             Name = "Pizza BBQ Chicken",
                             Price = 12.0m
                         },
                         new
                         {
-                            Id = new Guid("fab5a4fb-8964-40a9-83b1-a11ac5737499"),
+                            Id = new Guid("289b34c2-bcdf-45a0-8b5a-4f02068210b2"),
                             Description = "Pizza con jamón, piña y queso mozzarella.",
                             Name = "Pizza Hawaiian",
                             Price = 11.0m
                         },
                         new
                         {
-                            Id = new Guid("ca207b5f-28ef-4156-a4e2-7baebca48748"),
+                            Id = new Guid("be80bb47-1ef4-467d-8c7f-e77ed692b0fe"),
                             Description = "Pizza vegetariana con champiñones, pimientos, cebolla y aceitunas negras.",
                             Name = "Pizza Veggie Lovers",
                             Price = 10.0m
                         },
                         new
                         {
-                            Id = new Guid("37470a01-52f0-4552-b62b-4d6d4fb93fb8"),
+                            Id = new Guid("3e7c4ca0-def6-4330-b183-a9c9aff98ed1"),
                             Description = "Pizza con pepperoni, tocino, carne de res y chorizo.",
                             Name = "Pizza Meat Lovers",
                             Price = 14.0m

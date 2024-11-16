@@ -18,7 +18,6 @@ namespace Template.Domain.OrderAggregate
         {
             Client = null!;
             Pizzas = [];
-            Id = Guid.NewGuid();
         }
         internal Order(Client client, List<Pizza> pizzas, bool isFreeDelivery, DeliveryOrder delivery) : this()
         {
@@ -26,6 +25,7 @@ namespace Template.Domain.OrderAggregate
             Pizzas = pizzas;
             IsFreeDeviliry = isFreeDelivery;
             DeliveryOrders = delivery;
+            OrderDate = DateTime.Now;
         }
 
         public static Order CreateOrder(Client client, List<Pizza> pizzas, bool isFreeDelivery, DeliveryOrder delivery)

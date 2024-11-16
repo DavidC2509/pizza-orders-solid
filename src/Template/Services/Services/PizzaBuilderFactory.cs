@@ -1,22 +1,21 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Template.Domain.Services;
+﻿using Template.Domain.Services;
 
 namespace Template.Services.Services
 {
     public class PizzaBuilderFactory : IPizzaBuilderFactory
     {
-        private readonly IServiceProvider _serviceProvider;
+        private readonly IEnumerable<IPizzaBuilder> _pizzaBuilder;
 
-        public PizzaBuilderFactory(IServiceProvider serviceProvider)
+        public PizzaBuilderFactory(IEnumerable<IPizzaBuilder> pizzaBuilder)
         {
-            _serviceProvider = serviceProvider;
+            _pizzaBuilder = pizzaBuilder;
         }
 
         public IPizzaBuilder GetBuilder(bool isPersonalized)
         {
             return isPersonalized
-                ? _serviceProvider.GetRequiredService<PizzaPersonalizedBuilder>() // Builder para pizzas personalizadas
-                : _serviceProvider.GetRequiredService<PizzaRecipeBuilder>(); // Builder para pizzas preestablecidas
+                ? _pizzaBuilder.FirstOrDefault(s => s.UsePizzaBuilder == PizzaBuilderType.Personalizate) // Builder para pizzas personalizadas
+                : _pizzaBuilder.FirstOrDefault(s => s.UsePizzaBuilder == PizzaBuilderType.RecipePizza); // Builder preestablecidas
         }
     }
 }
