@@ -3,7 +3,7 @@ using Core.Cqrs.Domain.Repository;
 using MediatR;
 using MediatR.Pipeline;
 using System.Reflection;
-using Template.Domain.PizzaAggregate;
+using Template.Domain.OrderAggregate;
 using Module = Autofac.Module;
 
 namespace Template.Command

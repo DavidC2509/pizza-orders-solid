@@ -1,7 +1,6 @@
 ﻿using Core.Cqrs.Domain;
 using Core.Cqrs.Domain.Domain;
 using Template.Domain.ClientAggregate;
-using Template.Domain.PizzaAggregate;
 
 namespace Template.Domain.OrderAggregate
 {
@@ -9,7 +8,6 @@ namespace Template.Domain.OrderAggregate
     {
 
         public Client Client { get; set; }
-
         public DateTime OrderDate { get; set; }
         public decimal Total { get; set; }
         public bool IsFreeDeviliry { get; set; }
@@ -21,7 +19,16 @@ namespace Template.Domain.OrderAggregate
             Client = null!;
             Pizzas = [];
             Id = Guid.NewGuid();
-
         }
+        internal Order(Client client, List<Pizza> pizzas, bool isFreeDelivery, DeliveryOrder delivery) : this()
+        {
+            Client = client;
+            Pizzas = pizzas;
+            IsFreeDeviliry = isFreeDelivery;
+            DeliveryOrders = delivery;
+        }
+
+        public static Order CreateOrder(Client client, List<Pizza> pizzas, bool isFreeDelivery, DeliveryOrder delivery)
+            => new(client, pizzas, isFreeDelivery, delivery);
     }
 }

@@ -12,8 +12,8 @@ using Template.Command.Database;
 namespace Template.Command.Migrations
 {
     [DbContext(typeof(DataBaseContext))]
-    [Migration("20241115145901_Inital")]
-    partial class Inital
+    [Migration("20241116061840_Client")]
+    partial class Client
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,21 +40,6 @@ namespace Template.Command.Migrations
                     b.ToTable("IngredientPizza", (string)null);
                 });
 
-            modelBuilder.Entity("OrderPizzas", b =>
-                {
-                    b.Property<Guid>("OrdersId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("PizzasId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("OrdersId", "PizzasId");
-
-                    b.HasIndex("PizzasId");
-
-                    b.ToTable("OrderPizzas");
-                });
-
             modelBuilder.Entity("RecipePizzaIngredient", b =>
                 {
                     b.Property<Guid>("IngredientId")
@@ -72,23 +57,103 @@ namespace Template.Command.Migrations
                     b.HasData(
                         new
                         {
-                            IngredientId = new Guid("d0c97a12-0442-4bf7-9cc0-36b9960df708"),
-                            RecipePizzaId = new Guid("f85446d5-28af-446a-b9ed-aada8c234800")
+                            IngredientId = new Guid("ba523c79-b2f1-41d7-a58d-a36c9616532f"),
+                            RecipePizzaId = new Guid("e4f3b841-7e6d-45b4-9b7b-a2fd5506b5c8")
                         },
                         new
                         {
-                            IngredientId = new Guid("00455623-5fad-4c25-b023-eaa6312dccf1"),
-                            RecipePizzaId = new Guid("f85446d5-28af-446a-b9ed-aada8c234800")
+                            IngredientId = new Guid("5402502d-04c5-4939-a9c9-2928f7c5a18f"),
+                            RecipePizzaId = new Guid("e4f3b841-7e6d-45b4-9b7b-a2fd5506b5c8")
                         },
                         new
                         {
-                            IngredientId = new Guid("d0c97a12-0442-4bf7-9cc0-36b9960df708"),
-                            RecipePizzaId = new Guid("e90074cd-920d-4b07-8669-722365c417cc")
+                            IngredientId = new Guid("6573c568-d0f8-41e1-9658-bff0935a36e4"),
+                            RecipePizzaId = new Guid("e4f3b841-7e6d-45b4-9b7b-a2fd5506b5c8")
                         },
                         new
                         {
-                            IngredientId = new Guid("4cc9d738-2f35-4e1e-9ffa-f8ab56e8b42c"),
-                            RecipePizzaId = new Guid("e90074cd-920d-4b07-8669-722365c417cc")
+                            IngredientId = new Guid("ba523c79-b2f1-41d7-a58d-a36c9616532f"),
+                            RecipePizzaId = new Guid("513015e2-ed64-4990-8f4e-136a1115959d")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("85dc4e31-3661-4f42-a552-f4e829cd765f"),
+                            RecipePizzaId = new Guid("513015e2-ed64-4990-8f4e-136a1115959d")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("40d0560c-c3c6-4553-b297-0d2b024cf249"),
+                            RecipePizzaId = new Guid("e0cd7c0d-36b7-4b70-b172-64b9f9c031d4")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("4dac0e72-010b-4a6c-ae9b-e4d20c7664e5"),
+                            RecipePizzaId = new Guid("e0cd7c0d-36b7-4b70-b172-64b9f9c031d4")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("14a02fdf-8de4-49ef-98df-59d8e8d308b3"),
+                            RecipePizzaId = new Guid("e0cd7c0d-36b7-4b70-b172-64b9f9c031d4")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("a9248381-23db-4de3-8d47-7ad2c2f9bd95"),
+                            RecipePizzaId = new Guid("e0cd7c0d-36b7-4b70-b172-64b9f9c031d4")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("26590268-5b95-4336-bf14-b9db1c6534ce"),
+                            RecipePizzaId = new Guid("fab5a4fb-8964-40a9-83b1-a11ac5737499")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("d25d38ec-bec5-4554-9220-7f0a7e2cf8c3"),
+                            RecipePizzaId = new Guid("fab5a4fb-8964-40a9-83b1-a11ac5737499")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("a9248381-23db-4de3-8d47-7ad2c2f9bd95"),
+                            RecipePizzaId = new Guid("fab5a4fb-8964-40a9-83b1-a11ac5737499")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("5fd6e567-eab7-4af2-99cb-1a2a688e4128"),
+                            RecipePizzaId = new Guid("ca207b5f-28ef-4156-a4e2-7baebca48748")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("14a02fdf-8de4-49ef-98df-59d8e8d308b3"),
+                            RecipePizzaId = new Guid("ca207b5f-28ef-4156-a4e2-7baebca48748")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("d409fcab-4dd9-4f8c-a149-8cf4ca420897"),
+                            RecipePizzaId = new Guid("ca207b5f-28ef-4156-a4e2-7baebca48748")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("750730bb-597c-49d3-9979-aa3afa9ab97e"),
+                            RecipePizzaId = new Guid("ca207b5f-28ef-4156-a4e2-7baebca48748")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("85dc4e31-3661-4f42-a552-f4e829cd765f"),
+                            RecipePizzaId = new Guid("37470a01-52f0-4552-b62b-4d6d4fb93fb8")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("33cadc7e-f861-490f-b3ec-d4ebc4c7cf21"),
+                            RecipePizzaId = new Guid("37470a01-52f0-4552-b62b-4d6d4fb93fb8")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("58a3defc-5963-4bdf-b3fe-7cbd61d681e4"),
+                            RecipePizzaId = new Guid("37470a01-52f0-4552-b62b-4d6d4fb93fb8")
+                        },
+                        new
+                        {
+                            IngredientId = new Guid("ccc0f882-51f1-4ea1-bc3e-681bd6ba8b96"),
+                            RecipePizzaId = new Guid("37470a01-52f0-4552-b62b-4d6d4fb93fb8")
                         });
                 });
 
@@ -110,82 +175,82 @@ namespace Template.Command.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ec82c525-9413-4d3f-bc5f-293e3692946a"),
+                            Id = new Guid("003f2dc0-b273-486c-b952-76d0e8786ebd"),
                             Description = "Sin Borde"
                         },
                         new
                         {
-                            Id = new Guid("5a1686b7-4969-456d-9936-dec6f78faf48"),
+                            Id = new Guid("1464dd9d-4448-4344-9350-c6a5be5bdd84"),
                             Description = "Borde de queso"
                         },
                         new
                         {
-                            Id = new Guid("192bbc9a-22b0-4985-a906-f91dfecd560c"),
+                            Id = new Guid("dd9f9761-699f-4ae8-bb48-adbecdda1c44"),
                             Description = "Borde relleno de pepperoni"
                         },
                         new
                         {
-                            Id = new Guid("7c822420-65e4-4776-8b04-c4b6e8db6fbb"),
+                            Id = new Guid("42f20f20-4328-4f4e-a4f1-1472dcff201e"),
                             Description = "Borde de ajo y mantequilla"
                         },
                         new
                         {
-                            Id = new Guid("43837200-33d9-4814-b3b7-d5186fed87f6"),
+                            Id = new Guid("eae6ff13-f7fa-46eb-808e-9b006e698488"),
                             Description = "Borde crujiente"
                         },
                         new
                         {
-                            Id = new Guid("f712c727-ad26-4dce-a374-1d6fcf00654c"),
+                            Id = new Guid("58fbc043-4776-4af8-b398-0d77404f075d"),
                             Description = "Borde de masa fina"
                         },
                         new
                         {
-                            Id = new Guid("ddec3709-f414-49be-a951-38ccac9ecc73"),
+                            Id = new Guid("fa8b702b-203f-4de2-9aec-3291cc1bf9a8"),
                             Description = "Borde con parmesano"
                         },
                         new
                         {
-                            Id = new Guid("a0b4a738-0479-44cd-96de-596d541052e1"),
+                            Id = new Guid("29b3e47e-3eb9-4c5e-be9a-7f71b4e14f09"),
                             Description = "Borde relleno de jalapeños"
                         },
                         new
                         {
-                            Id = new Guid("1817c44f-1dae-43a2-872a-c25ae3b40b2c"),
+                            Id = new Guid("0cef82d9-b8d6-4a1d-94ae-08aefcbcadf7"),
                             Description = "Borde relleno de queso cheddar"
                         },
                         new
                         {
-                            Id = new Guid("c2900aec-9ab7-4fe2-89af-b210b9bdffce"),
+                            Id = new Guid("c96ac994-c02a-4b59-af0f-4561718de601"),
                             Description = "Borde de pan de ajo"
                         },
                         new
                         {
-                            Id = new Guid("19c3a0b2-7be8-4446-8f6c-82d897f78410"),
+                            Id = new Guid("4809532b-d38c-4ace-b05a-47b06325c161"),
                             Description = "Borde sin gluten"
                         },
                         new
                         {
-                            Id = new Guid("3b5ff98d-9971-41b0-908c-ec02c8d3b9ef"),
+                            Id = new Guid("16ea2589-4bd3-4a06-972c-6d8eb9490a3d"),
                             Description = "Borde tradicional"
                         },
                         new
                         {
-                            Id = new Guid("8dfc18e2-403d-407b-965f-d993abdbea3f"),
+                            Id = new Guid("1840bad6-3f22-4761-b95e-92e032ea0581"),
                             Description = "Borde relleno de salchicha"
                         },
                         new
                         {
-                            Id = new Guid("02ba093d-96a5-4646-affe-5c51583ed790"),
+                            Id = new Guid("0e3054f7-7f66-4540-ac6e-3d57c140d930"),
                             Description = "Borde extra crujiente"
                         },
                         new
                         {
-                            Id = new Guid("8a844f4a-4b7a-4b26-834d-9610e542b6e6"),
+                            Id = new Guid("6b4f140d-37b8-4732-9760-1c160c05ed8d"),
                             Description = "Borde con especias italianas"
                         },
                         new
                         {
-                            Id = new Guid("40cc86c0-86e1-4126-b505-d5edcb00a813"),
+                            Id = new Guid("ef52ceb3-4ad8-45ce-ad65-fe164a02b8f6"),
                             Description = "Borde con orégano y aceite de oliva"
                         });
                 });
@@ -212,6 +277,15 @@ namespace Template.Command.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Client", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("28f1aa92-81d0-47f8-9bee-3464466b9b31"),
+                            CellPhone = "75324397",
+                            Email = "davidFernando@gmil.com",
+                            Name = "David"
+                        });
                 });
 
             modelBuilder.Entity("Template.Domain.IngredientsAggregate.Ingredient", b =>
@@ -235,27 +309,123 @@ namespace Template.Command.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("d0c97a12-0442-4bf7-9cc0-36b9960df708"),
+                            Id = new Guid("ba523c79-b2f1-41d7-a58d-a36c9616532f"),
                             Amount = 2.0m,
                             Name = "Queso"
                         },
                         new
                         {
-                            Id = new Guid("00455623-5fad-4c25-b023-eaa6312dccf1"),
+                            Id = new Guid("5402502d-04c5-4939-a9c9-2928f7c5a18f"),
                             Amount = 1.5m,
                             Name = "Salsa de Tomate"
                         },
                         new
                         {
-                            Id = new Guid("4cc9d738-2f35-4e1e-9ffa-f8ab56e8b42c"),
+                            Id = new Guid("85dc4e31-3661-4f42-a552-f4e829cd765f"),
                             Amount = 2.5m,
                             Name = "Pepperoni"
                         },
                         new
                         {
-                            Id = new Guid("7599ceef-6ac1-4826-bd2d-c912c65108c1"),
+                            Id = new Guid("5fd6e567-eab7-4af2-99cb-1a2a688e4128"),
                             Amount = 1.0m,
                             Name = "Champiñones"
+                        },
+                        new
+                        {
+                            Id = new Guid("14a02fdf-8de4-49ef-98df-59d8e8d308b3"),
+                            Amount = 0.8m,
+                            Name = "Cebolla"
+                        },
+                        new
+                        {
+                            Id = new Guid("d409fcab-4dd9-4f8c-a149-8cf4ca420897"),
+                            Amount = 1.2m,
+                            Name = "Aceitunas Negras"
+                        },
+                        new
+                        {
+                            Id = new Guid("26590268-5b95-4336-bf14-b9db1c6534ce"),
+                            Amount = 2.0m,
+                            Name = "Jamón"
+                        },
+                        new
+                        {
+                            Id = new Guid("d25d38ec-bec5-4554-9220-7f0a7e2cf8c3"),
+                            Amount = 1.5m,
+                            Name = "Piña"
+                        },
+                        new
+                        {
+                            Id = new Guid("33cadc7e-f861-490f-b3ec-d4ebc4c7cf21"),
+                            Amount = 2.5m,
+                            Name = "Tocino"
+                        },
+                        new
+                        {
+                            Id = new Guid("4dac0e72-010b-4a6c-ae9b-e4d20c7664e5"),
+                            Amount = 2.5m,
+                            Name = "Pollo"
+                        },
+                        new
+                        {
+                            Id = new Guid("58a3defc-5963-4bdf-b3fe-7cbd61d681e4"),
+                            Amount = 3.0m,
+                            Name = "Carne de Res"
+                        },
+                        new
+                        {
+                            Id = new Guid("40d0560c-c3c6-4553-b297-0d2b024cf249"),
+                            Amount = 1.8m,
+                            Name = "Salsa BBQ"
+                        },
+                        new
+                        {
+                            Id = new Guid("a9248381-23db-4de3-8d47-7ad2c2f9bd95"),
+                            Amount = 2.0m,
+                            Name = "Queso Mozzarella"
+                        },
+                        new
+                        {
+                            Id = new Guid("b5a0e248-2398-4908-a597-0e0318fda2b2"),
+                            Amount = 1.5m,
+                            Name = "Queso Parmesano"
+                        },
+                        new
+                        {
+                            Id = new Guid("8bec8b77-a1be-4596-9b7d-e1874edf5fa7"),
+                            Amount = 1.5m,
+                            Name = "Salsa Alfredo"
+                        },
+                        new
+                        {
+                            Id = new Guid("6573c568-d0f8-41e1-9658-bff0935a36e4"),
+                            Amount = 0.7m,
+                            Name = "Albahaca Fresca"
+                        },
+                        new
+                        {
+                            Id = new Guid("750730bb-597c-49d3-9979-aa3afa9ab97e"),
+                            Amount = 1.0m,
+                            Name = "Tomates Cherry"
+                        },
+                        new
+                        {
+                            Id = new Guid("ccc0f882-51f1-4ea1-bc3e-681bd6ba8b96"),
+                            Amount = 2.8m,
+                            Name = "Chorizo"
+                        },
+                        new
+                        {
+                            Id = new Guid("12d9836a-0c9e-41b6-acff-53b35aa5c3c9"),
+                            Amount = 1.0m,
+                            Name = "Jalapeños"
+                        },
+                        new
+                        {
+                            Id = new Guid("4b28cdfa-0f5c-4820-98ed-4acc132c3299"),
+                            Amount = 2.0m,
+                            Name = "Anchoas"
                         });
                 });
 
@@ -265,6 +435,10 @@ namespace Template.Command.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid")
                         .HasDefaultValueSql("gen_random_uuid()");
+
+                    b.Property<string>("Addres")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<bool>("IsFree")
                         .HasColumnType("boolean");
@@ -303,7 +477,7 @@ namespace Template.Command.Migrations
                     b.ToTable("Order", (string)null);
                 });
 
-            modelBuilder.Entity("Template.Domain.PizzaAggregate.Pizza", b =>
+            modelBuilder.Entity("Template.Domain.OrderAggregate.Pizza", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -316,6 +490,9 @@ namespace Template.Command.Migrations
                     b.Property<Guid?>("BorderIds")
                         .HasColumnType("uuid");
 
+                    b.Property<int>("CountPizza")
+                        .HasColumnType("integer");
+
                     b.Property<bool>("IsPersonalizate")
                         .HasColumnType("boolean");
 
@@ -323,12 +500,17 @@ namespace Template.Command.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<Guid>("OrderIds")
+                        .HasColumnType("uuid");
+
                     b.Property<Guid?>("RecipePizzaId")
                         .HasColumnType("uuid");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BorderIds");
+
+                    b.HasIndex("OrderIds");
 
                     b.HasIndex("RecipePizzaId");
 
@@ -360,17 +542,45 @@ namespace Template.Command.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f85446d5-28af-446a-b9ed-aada8c234800"),
+                            Id = new Guid("e4f3b841-7e6d-45b4-9b7b-a2fd5506b5c8"),
                             Description = "Pizza clásica con salsa de tomate, mozzarella y albahaca fresca.",
-                            Name = "Margarita",
+                            Name = "Pizza Margarita",
                             Price = 8.5m
                         },
                         new
                         {
-                            Id = new Guid("e90074cd-920d-4b07-8669-722365c417cc"),
+                            Id = new Guid("513015e2-ed64-4990-8f4e-136a1115959d"),
                             Description = "Pizza con pepperoni y queso mozzarella.",
-                            Name = "Pepperoni",
+                            Name = "Pizza Pepperoni",
                             Price = 10.0m
+                        },
+                        new
+                        {
+                            Id = new Guid("e0cd7c0d-36b7-4b70-b172-64b9f9c031d4"),
+                            Description = "Pizza con salsa BBQ, pollo, cebolla y queso mozzarella.",
+                            Name = "Pizza BBQ Chicken",
+                            Price = 12.0m
+                        },
+                        new
+                        {
+                            Id = new Guid("fab5a4fb-8964-40a9-83b1-a11ac5737499"),
+                            Description = "Pizza con jamón, piña y queso mozzarella.",
+                            Name = "Pizza Hawaiian",
+                            Price = 11.0m
+                        },
+                        new
+                        {
+                            Id = new Guid("ca207b5f-28ef-4156-a4e2-7baebca48748"),
+                            Description = "Pizza vegetariana con champiñones, pimientos, cebolla y aceitunas negras.",
+                            Name = "Pizza Veggie Lovers",
+                            Price = 10.0m
+                        },
+                        new
+                        {
+                            Id = new Guid("37470a01-52f0-4552-b62b-4d6d4fb93fb8"),
+                            Description = "Pizza con pepperoni, tocino, carne de res y chorizo.",
+                            Name = "Pizza Meat Lovers",
+                            Price = 14.0m
                         });
                 });
 
@@ -382,24 +592,9 @@ namespace Template.Command.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Template.Domain.PizzaAggregate.Pizza", null)
+                    b.HasOne("Template.Domain.OrderAggregate.Pizza", null)
                         .WithMany()
                         .HasForeignKey("PizzaId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("OrderPizzas", b =>
-                {
-                    b.HasOne("Template.Domain.OrderAggregate.Order", null)
-                        .WithMany()
-                        .HasForeignKey("OrdersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Template.Domain.PizzaAggregate.Pizza", null)
-                        .WithMany()
-                        .HasForeignKey("PizzasId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
@@ -441,17 +636,25 @@ namespace Template.Command.Migrations
                     b.Navigation("Client");
                 });
 
-            modelBuilder.Entity("Template.Domain.PizzaAggregate.Pizza", b =>
+            modelBuilder.Entity("Template.Domain.OrderAggregate.Pizza", b =>
                 {
                     b.HasOne("Template.Domain.BorderAggregate.Border", "Borders")
                         .WithMany("Pizzas")
                         .HasForeignKey("BorderIds");
+
+                    b.HasOne("Template.Domain.OrderAggregate.Order", "Order")
+                        .WithMany("Pizzas")
+                        .HasForeignKey("OrderIds")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Template.Domain.RecipePizzaAggregate.RecipePizza", "RecipePizza")
                         .WithMany("Pizzas")
                         .HasForeignKey("RecipePizzaId");
 
                     b.Navigation("Borders");
+
+                    b.Navigation("Order");
 
                     b.Navigation("RecipePizza");
                 });
@@ -469,6 +672,8 @@ namespace Template.Command.Migrations
             modelBuilder.Entity("Template.Domain.OrderAggregate.Order", b =>
                 {
                     b.Navigation("DeliveryOrders");
+
+                    b.Navigation("Pizzas");
                 });
 
             modelBuilder.Entity("Template.Domain.RecipePizzaAggregate.RecipePizza", b =>

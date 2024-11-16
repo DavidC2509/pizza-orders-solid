@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Template.Domain.IngredientsAggregate;
-using Template.Domain.PizzaAggregate;
+using Template.Domain.OrderAggregate;
 using Template.Domain.RecipePizzaAggregate;
 
 namespace Template.Command.Database.Configurations
@@ -55,12 +55,28 @@ namespace Template.Command.Database.Configurations
 
             // Datos iniciales
             var ingredients = new[]
-            {
-            CreateIngredient("Queso", 2.0m),
-            CreateIngredient("Salsa de Tomate", 1.5m),
-            CreateIngredient("Pepperoni", 2.5m),
-            CreateIngredient("Champiñones", 1.0m)
-        };
+{
+    CreateIngredient("Queso", 2.0m),
+    CreateIngredient("Salsa de Tomate", 1.5m),
+    CreateIngredient("Pepperoni", 2.5m),
+    CreateIngredient("Champiñones", 1.0m),
+    CreateIngredient("Cebolla", 0.8m),
+    CreateIngredient("Aceitunas Negras", 1.2m),
+    CreateIngredient("Jamón", 2.0m),
+    CreateIngredient("Piña", 1.5m),
+    CreateIngredient("Tocino", 2.5m),
+    CreateIngredient("Pollo", 2.5m),
+    CreateIngredient("Carne de Res", 3.0m),
+    CreateIngredient("Salsa BBQ", 1.8m),
+    CreateIngredient("Queso Mozzarella", 2.0m),
+    CreateIngredient("Queso Parmesano", 1.5m),
+    CreateIngredient("Salsa Alfredo", 1.5m),
+    CreateIngredient("Albahaca Fresca", 0.7m),
+    CreateIngredient("Tomates Cherry", 1.0m),
+    CreateIngredient("Chorizo", 2.8m),
+    CreateIngredient("Jalapeños", 1.0m),
+    CreateIngredient("Anchoas", 2.0m)
+};
 
             builder.HasData(ingredients);
         }

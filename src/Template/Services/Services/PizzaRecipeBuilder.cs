@@ -1,6 +1,6 @@
 ﻿using Template.Domain.BorderAggregate;
 using Template.Domain.IngredientsAggregate;
-using Template.Domain.PizzaAggregate;
+using Template.Domain.OrderAggregate;
 using Template.Domain.RecipePizzaAggregate;
 using Template.Domain.Services;
 

@@ -20,6 +20,10 @@ namespace Template.Command.Database.Configurations
             .HasMany(e => e.Orders)
               .WithOne(e => e.Client)
               .HasForeignKey("ClientId");
+
+            var client = Client.CreateClient("David", "davidFernando@gmil.com", "75324397");
+
+            builder.HasData(client);
         }
     }
 }

@@ -2,26 +2,32 @@
 using Core.Cqrs.Domain.Domain;
 using Template.Domain.BorderAggregate;
 using Template.Domain.IngredientsAggregate;
-using Template.Domain.OrderAggregate;
 using Template.Domain.RecipePizzaAggregate;
 
-namespace Template.Domain.PizzaAggregate
+namespace Template.Domain.OrderAggregate
 {
-    public class Pizza : BaseEntity, IAggregateRoot
+    public class Pizza : BaseEntity, IAggregateChild<Order>
     {
         public string Name { get; set; }
         public bool IsPersonalizate { get; set; }
         public decimal AmountBase { get; set; }
         public ICollection<Ingredient> Ingredients { get; set; }
-        public RecipePizza? RecipePizza { get; set; }
-        public ICollection<Order> Orders { get; set; }
+
+        public Guid? RecipePizzaId { get; set; }
+
+        virtual
+        public RecipePizza? RecipePizza
+        { get; set; }
+
         public Border? Borders { get; set; }
+        public int CountPizza { get; set; }
+        public Order Order { get; set; }
 
         private Pizza()
         {
             Name = string.Empty;
             Ingredients = [];
-            Orders = [];
+            Order = null!;
         }
 
         public static Pizza CreatePizzaSinDecorar()
@@ -51,8 +57,6 @@ namespace Template.Domain.PizzaAggregate
         {
             Ingredients.Add(ingredient);
         }
-
-
 
     }
 }

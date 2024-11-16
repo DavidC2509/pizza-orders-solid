@@ -13,11 +13,20 @@ namespace Template.Command.Database.Configurations
             // Configure the Id property to use the database default value for new entities
             builder.Property(e => e.Id)
             .HasDefaultValueSql("gen_random_uuid()");
+
             builder.HasKey(e => e.Id);
+
             builder
              .HasOne(e => e.DeliveryOrders)
               .WithOne(e => e.Order)
               .HasForeignKey<DeliveryOrder>();
+
+            builder
+                 .HasMany(e => e.Pizzas)
+                  .WithOne(e => e.Order)
+                  .HasForeignKey("OrderIds");
+
+
 
             builder
             .Property(p => p.Total)

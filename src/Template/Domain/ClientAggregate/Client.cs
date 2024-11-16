@@ -19,5 +19,20 @@ namespace Template.Domain.ClientAggregate
             Orders = [];
         }
 
+
+        internal Client(string name, string email, string cellPhone) : this()
+        {
+            Name = name;
+            Email = email;
+            CellPhone = cellPhone;
+
+            Id = Guid.NewGuid();
+
+
+        }
+
+        public static Client CreateClient(string name, string email, string cellPhone)
+        => new(name, email, cellPhone);
+
     }
 }

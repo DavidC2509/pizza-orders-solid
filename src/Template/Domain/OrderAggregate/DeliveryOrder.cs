@@ -8,11 +8,32 @@ namespace Template.Domain.OrderAggregate
         public Order Order { get; set; }
         public bool IsFree { get; set; }
         public decimal Price { get; set; }
+        public string Addres { get; set; }
 
         private DeliveryOrder()
         {
             Order = null!;
+            Addres = string.Empty;
         }
+
+        internal DeliveryOrder(string addres, bool isFree) : this()
+        {
+            Addres = addres;
+            if (isFree)
+            {
+                Price = 0;
+            }
+            else
+            {
+                Price = 10;
+            }
+            IsFree = isFree;
+        }
+
+        public static DeliveryOrder CreateDeliveryOrder(string addres, bool isFree)
+            => new(addres, isFree);
+
+
 
     }
 }

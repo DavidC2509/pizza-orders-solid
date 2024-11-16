@@ -1,11 +1,11 @@
 ﻿using Template.Domain.BorderAggregate;
 using Template.Domain.IngredientsAggregate;
-using Template.Domain.PizzaAggregate;
+using Template.Domain.OrderAggregate;
 using Template.Domain.RecipePizzaAggregate;
 using Template.Domain.Services;
 using Template.Services.Services;
 
-namespace Template.Api.Builder
+namespace Template.Services.Builder
 {
     public class PizzaDirector
     {
@@ -17,23 +17,23 @@ namespace Template.Api.Builder
             _builderFactory = builderFactory;
         }
 
-        public void ConstruirPizzaPersonalizada(decimal baseAmount, ICollection<Ingredient> ingredients, Border border)
+        public void BuildCustomPizza(ICollection<Ingredient> ingredients, Border border)
         {
             _builder = _builderFactory.GetBuilder(isPersonalized: true);
             _builder.Reset();
             _builder.SetName("Personalizada");
-            _builder.SetBaseAmount(baseAmount);
+            _builder.SetBaseAmount(10);
             _builder.SetPersonalization(true); // Indica que es personalizada
             _builder.SetIngredients(ingredients); // Se puede añadir una lista de ingredientes
             _builder.SetBorder(border);
         }
 
-        public void ConstruirPizzaPreestablecida(decimal baseAmount, RecipePizza recipe, Border border)
+        public void BuildRecipePizza(RecipePizza recipe, Border border)
         {
             _builder = _builderFactory.GetBuilder(isPersonalized: false);
             _builder.Reset();
             _builder.SetName(recipe.Name);
-            _builder.SetBaseAmount(baseAmount);
+            _builder.SetBaseAmount(20);
             _builder.SetPersonalization(false); // Indica que es preestablecida
             _builder.SetRecipe(recipe); // Establece la receta
             _builder.SetBorder(border);

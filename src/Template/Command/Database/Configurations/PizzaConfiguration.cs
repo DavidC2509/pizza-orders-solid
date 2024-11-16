@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Template.Domain.PizzaAggregate;
+using Template.Domain.OrderAggregate;
 
 namespace Template.Command.Database.Configurations
 {
@@ -14,10 +14,6 @@ namespace Template.Command.Database.Configurations
             builder.Property(e => e.Id)
             .HasDefaultValueSql("gen_random_uuid()");
             builder.HasKey(e => e.Id);
-            builder
-            .HasMany(e => e.Orders)
-           .WithMany(e => e.Pizzas)
-           .UsingEntity("OrderPizzas");
 
             builder
              .Property(p => p.AmountBase)

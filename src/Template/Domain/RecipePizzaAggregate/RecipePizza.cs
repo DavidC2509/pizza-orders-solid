@@ -1,7 +1,7 @@
 ﻿using Core.Cqrs.Domain;
 using Core.Cqrs.Domain.Domain;
 using Template.Domain.IngredientsAggregate;
-using Template.Domain.PizzaAggregate;
+using Template.Domain.OrderAggregate;
 
 namespace Template.Domain.RecipePizzaAggregate
 {
